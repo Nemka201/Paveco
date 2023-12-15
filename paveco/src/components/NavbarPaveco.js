@@ -2,9 +2,9 @@ import logo from "../assets/pavecoIcon.png";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg sticky-top navbar-blur">
         <div className="container-fluid">
-          <div className="col-7">
+          <div className="col-8">
             <a className="navbar-brand ms-4" href="#">
               <img src={logo} alt="Bootstrap" width="100" height="88.5"></img>
             </a>
@@ -20,7 +20,7 @@ function Navbar() {
               <span className="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div className="col-5">
+          <div className="col-4">
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item mt-2">
@@ -34,12 +34,12 @@ function Navbar() {
                   </a>
                 </li>
                 <li className="nav-item mt-2">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/Beneficios">
                     Beneficios
                   </a>
                 </li>
                 <li className="nav-item mt-2">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/Usos">
                     Usos
                   </a>
                 </li>

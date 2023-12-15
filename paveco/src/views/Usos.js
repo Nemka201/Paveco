@@ -1,13 +1,12 @@
-import Banner from "../components/Banner";
 import Navbar from "../components/NavbarPaveco";
 
-function Home() {
+function Usos() {
   return (
     <>
       <Navbar/>
-      <Banner/>
+
     </>
   );
 }
 
-export default Home;
+export default Usos;
