@@ -44,12 +44,27 @@
   border-bottom: 1px solid white;
   border-radius: 15px 15px 15px 15px;
 }
+.b-card{
+  background-color: black;
+  border-radius: 15px;
+  padding: 1.2em;
+  box-shadow: 1px 1px 12px var(--color-white);
+  align-items: center;
+  justify-content: center;
+}
+.b-card h2{
+  font-family: var(--fuente-Oswald);
+  font-weight: 300;
+  color: var(--color-white);
+  font-size: 1.9em;
+
+}
 .banner{
-  /* background-color: var(--color-hover); */
-  background: rgb(122,122,122);
-  background: -moz-linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%);
+  background-color: black;
+  /* background: rgb(122,122,122); */
+  /* background: -moz-linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%);
   background: -webkit-linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%);
-  background: linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%);
+  background: linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%); */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a7a7a",endColorstr="#1e5155",GradientType=1);
   margin:0;
   padding: 0;
@@ -58,7 +73,7 @@
 .text-on-image {
   position: absolute;
   top: 33%;
-  left: 18%;
+  left: 20%;
   transform: translate(-50%, -50%);
   color: white;
   margin:0;

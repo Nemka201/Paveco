@@ -13,10 +13,10 @@ function Banner() {
                 <img src={pavecoFoto} alt="Paveco" className=""></img>
               </div>
               <div className="col-6 col-xl-6 col-sm-12 mt-4">
-                <h1 className="text-normal mt-5 ps-3">
+                <h1 className="text-normal mt-5 ps-3 ps-lg-5 ps-xl-5">
                   ECOPAV
                 </h1>
-                <h2 className="text-normal mt-2 ps-3">
+                <h2 className="text-normal mt-2 ps-3 ps-lg-5 ps-xl-5">
                   Es un Superpave modificado con biopolímeros de alto
                   rendimiento formulado con aditivos especiales, que permite
                   fabricar asfalto frio al ser mezclado con agregados minerales

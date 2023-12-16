@@ -38,7 +38,7 @@ export default function Carousel(props) {
     <>
       <div className="col-12">
         <img
-          src={require(`../assets/img/${selectedImage}`)}
+          src={require(`../assets/carousel/${selectedImage}`)}
           alt="Paveco"
           className="c-banner"
           onLoad={() => setLoaded(true)}
