@@ -3,7 +3,7 @@
 :root {
   --color-principal: #61CE70;
   --color-hover: #03c27f;
-  --color-secundario: #7A7A7A;
+  --color-secundario: #7a7a7a;
   --color-texto: #070731;
   --color-white: rgb(255,255,255);
   --hover-color: #1e5155;
@@ -11,10 +11,54 @@
   --fuente-Oswald: 'Oswald', sans-serif;
 
 }
+.t-black{
+  width: 0;
+  height: 0;
+  border-left: 31.25em solid transparent;
+  border-right: 31.25em solid transparent;
+  border-bottom: 6.25em solid black;
+  position: relative;
+  top: 100px;
+  left: 45em;
+  z-index: 1;
+  transform: rotate(180deg);
+}
+.ficha-tecnica{
+  font-family: var(--fuente-Oswald);
+}
+.ficha-tecnica p{
+  font-size: 1.33em;
+}
+.ficha-tecnica h1{
+  font-size: 2.5em;
+}
+.ficha-tecnica h3{
+  font-size: 1.75em;
+}
+.alianza-estrategica{
+  font-family: var(--fuente-Oswald);
+  font-weight: 300;
+  font-size: 1.66em;
+}
+.alianza-estrategica h1{
+  font-size: 3em;
+  font-weight: 700;
+}
+.alianza-estrategica h3{
+  font-size: 2em;
+  font-weight: 700;
+
+}
 .text-normal{
   font-family: var(--fuente-Oswald);
   color: var(--color-white);
   text-shadow: 2px 2px 1px black;
+}
+.titulo-beneficio{
+  font-family: var(--fuente-Oswald);
+  color: var(--color-white);
+  font-size: 3.5em;
+  text-shadow: 1px 1px 1px var(--color-principal);
 }
 .titulo-paveco{
   font-family: var(--fuente-Oswald);
@@ -27,8 +71,11 @@
   display: block;
 }
 .navbar-blur{
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 1);
   backdrop-filter: blur(5px);
+}
+.i-tabla{
+  width: 80%;
 }
 .c-banner{
   background-color: rgba(3, 194, 127, 0.5);
@@ -46,18 +93,15 @@
 }
 .b-card{
   background-color: black;
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 1.2em;
   box-shadow: 1px 1px 12px var(--color-white);
-  align-items: center;
-  justify-content: center;
 }
 .b-card h2{
   font-family: var(--fuente-Oswald);
   font-weight: 300;
   color: var(--color-white);
-  font-size: 1.9em;
-
+  font-size: 1.8em;
 }
 .banner{
   background-color: black;
