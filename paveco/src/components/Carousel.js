@@ -44,7 +44,7 @@ export default function Carousel(props) {
           onLoad={() => setLoaded(true)}
         />
         <div className="text-on-image">
-          <h1 class="titulo-paveco">PAVECO</h1>
+          <h1 className="titulo-paveco">PAVECO</h1>
           <hr></hr>
           <h5>ASFALTO ECOLÓGICO.</h5>
         </div>
