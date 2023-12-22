@@ -32,7 +32,9 @@ function BeneficiosComponent() {
           </div>
           <div className="col-1"></div>
         </div>
-        <div className="t-black"></div>
+        <div className=" over">
+          <div className="t-black"></div>
+        </div>
       </div>
     </>
   );

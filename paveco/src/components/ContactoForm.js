@@ -18,7 +18,7 @@ const ContactoForm = () => {
 
   return (
     <div className="container form-consulta">
-      <h1>Envianos tu consulta</h1>
+      <h1 className="text-center">Envianos tu consulta</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo de nombre */}
         <Form.Group className="mb-3">

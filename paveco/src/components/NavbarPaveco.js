@@ -6,7 +6,7 @@ function Navbar() {
         <div className="container-fluid">
           <div className="col-8">
             <a className="navbar-brand ms-4" href="#">
-              <img src={logo} alt="Bootstrap" width="100" height="88.5"></img>
+              <img src={logo} alt="Bootstrap" width="90" height="80.45"></img>
             </a>
             <button
               className="navbar-toggler"

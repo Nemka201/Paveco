@@ -11,17 +11,18 @@
   --fuente-Oswald: 'Oswald', sans-serif;
 
 }
-.t-black{
+.t-black {
   width: 0;
   height: 0;
-  border-left: 31.25em solid transparent;
-  border-right: 31.25em solid transparent;
+  border-left: 50vh solid transparent;
+  border-right: 50vh solid transparent;
   border-bottom: 6.25em solid black;
   position: relative;
   top: 100px;
-  left: 45em;
+  left: 50%;
   z-index: 1;
   transform: rotate(180deg);
+  overflow: hidden;
 }
 .ficha-tecnica{
   font-family: var(--fuente-Oswald);
@@ -131,6 +132,7 @@
   font-weight: 700;
   color: var(--color-texto);
   font-size: 18px;
+  word-wrap: normal;
 }
 .form-consulta{
   background-color: black;
@@ -149,6 +151,12 @@
   padding: 8px 25px 8px 25px;
 }
 .btn-enviar{
+  border-radius:7px;
+  color: var(--color-white);
+  background-color: var(--color-secundario);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 25px 8px 25px;
   width: 100%;
 }
 .btn-contacto:hover{
@@ -163,4 +171,37 @@
 }
 .contacto{
   background-color: #03c27f;
+}
+@media screen and (max-width:600px) {
+  .t-black {
+    border-left: 25vh solid transparent;
+    border-right: 25vh solid transparent;
+    border-bottom: 6.25em solid rgb(0, 0, 0);
+    left: 36%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .t-black {
+    border-left: 40vh solid transparent;
+    border-right: 40vh solid transparent;
+    border-bottom: 6.25em solid rgb(0, 0, 0);
+    left: 33%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .t-black {
+    border-left: 45vh solid transparent;
+    border-right: 45vh solid transparent;
+    border-bottom: 6.25em solid rgb(0, 0, 0);
+    margin-bottom: 35px;
+    left: 39%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .t-black {
+    border-left: 45vh solid transparent;
+    border-right: 45vh solid transparent;
+    border-bottom: 6.25em solid rgb(0, 0, 0);
+    left: 50%;
+  }
 }
