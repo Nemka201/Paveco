@@ -6,7 +6,7 @@ function BeneficiosCard({...props}){
     <>
       <div className="col-4 pt-5 pe-5 col-sm-12 col-md-12 col-lg-12 col-xl-4">
         <div className="b-card mb-5">
-        <i className="fa-solid fa-circle-check" style={{color: "#61CE70",fontSize: "50px",}}></i>
+        <i className="fa-solid fa-circle-check" style={{color: "#00ff22",fontSize: "50px",}}></i>
           {list}
         </div>
       </div>

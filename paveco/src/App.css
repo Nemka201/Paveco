@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
 
 :root {
-  --color-principal: #61CE70;
-  --color-hover: #03c27f;
+  --color-principal: #00ff22;
+  /* --color-hover: #03c27f; */
+  --color-hover: #00ff22;
+
   --color-secundario: #7a7a7a;
-  --color-texto: #070731;
+  --color-texto: black;
   --color-white: rgb(255,255,255);
   --hover-color: #1e5155;
   --fuente-principal: "Roboto", sans-serif;
@@ -23,6 +25,16 @@
   z-index: 1;
   transform: rotate(180deg);
   overflow: hidden;
+}
+.t-black-i {
+  width: 0;
+  height: 0;
+  border-left: 50vh solid transparent;
+  border-right: 50vh solid transparent;
+  border-bottom: 6.25em solid black;
+  position: relative;
+  bottom: 100px;
+  z-index: 1;
 }
 .ficha-tecnica{
   font-family: var(--fuente-Oswald);
@@ -71,9 +83,9 @@
 .show{
   display: block;
 }
-.navbar-blur{
-  background-color: rgba(255, 255, 255, 1);
-  backdrop-filter: blur(5px);
+.navbar-gradient{
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(47,255,0,0.7142506660867471) 100%);
 }
 .i-tabla{
   width: 80%;
@@ -90,13 +102,14 @@
   margin:20px 0 0 0;
   position: relative;
   border-bottom: 1px solid white;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 0px 0px;
 }
 .b-card{
-  background-color: black;
+  background-color: var(--color-secundario);
   border-radius: 25px;
   padding: 1.2em;
-  box-shadow: 1px 1px 12px var(--color-white);
+  text-shadow: 2px 2px 6px black;
+  min-height: 80vh;
 }
 .b-card h2{
   font-family: var(--fuente-Oswald);
@@ -105,11 +118,8 @@
   font-size: 1.8em;
 }
 .banner{
-  background-color: black;
-  /* background: rgb(122,122,122); */
-  /* background: -moz-linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%);
-  background: linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(3,194,127,1) 41%, rgba(30,81,85,1) 100%); */
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(47,255,0,0.7142506660867471) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a7a7a",endColorstr="#1e5155",GradientType=1);
   margin:0;
   padding: 0;
@@ -130,7 +140,7 @@
 .navbar{
   font-family: var(--fuente-Oswald);
   font-weight: 700;
-  color: var(--color-texto);
+  color: var(--color-white);
   font-size: 18px;
   word-wrap: normal;
 }
@@ -160,17 +170,17 @@
   width: 100%;
 }
 .btn-contacto:hover{
-  background-color: var(--color-hover);
+  background-color: var(--color-principal);
   color: var(--color-white)
 }
 .nav-link{
-  color: var(--color-texto);
+  color: var(--color-white);
 }
 .nav-link:hover{
   color: var(--color-hover);
 }
 .contacto{
-  background-color: #03c27f;
+  background-color: var(--color-secundario);
 }
 @media screen and (max-width:600px) {
   .t-black {
@@ -206,6 +216,6 @@
     border-left: 45vh solid transparent;
     border-right: 45vh solid transparent;
     border-bottom: 6.25em solid rgb(0, 0, 0);
-    left: 50%;
+    left: 55.9%;
   }
 }

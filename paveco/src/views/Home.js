@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import Navbar from "../components/NavbarPaveco";
 import pavecoFoto from "../assets/img/paveco_1.png";
+import AlianzaEstrategica from "../components/AlianzaEstrategica";
 
 function Home() {
   return (
@@ -31,7 +32,11 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className=" over">
+          <div className="t-black"></div>
+        </div>
       </div>
+      <AlianzaEstrategica/>
     </>
   );
 }
