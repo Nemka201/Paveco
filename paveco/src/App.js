@@ -18,6 +18,7 @@ function App() {
         <Route path="/Beneficios" element={<Beneficios/>} />
         <Route path="/Productos-y-Servicios" element={<ProductosServicios/>} />
         <Route path="/Usos" element={<Usos/>} />
+        <Route path="/Noticias" element={<Usos/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,11 +4,14 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg sticky-top navbar-gradient">
         <div className="container-fluid text-center">
-          <div className="col-8">
+          <div className="col-sm-2 col-md-4 col-lg-6 col-xl-7 text-start">
             <a className="navbar-brand ms-4" href="/">
               <img src={logo} alt="Bootstrap" width="90" height="80.45"></img>
             </a>
-            <button
+            
+          </div>
+          <div className="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+          <button
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -19,8 +22,6 @@ function Navbar() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-          </div>
-          <div className="col-4">
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item mt-2">
