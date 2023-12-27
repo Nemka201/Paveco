@@ -5,6 +5,7 @@ import FichaTecnica from './views/FichaTecnica.js';
 import Contacto from './views/Contacto.js';
 import Beneficios from './views/Beneficios.js';
 import Usos from './views/Usos.js';
+import Noticias from './views/Noticias.js';
 import ProductosServicios from './views/ProducosServicios.js';
 
 
@@ -18,7 +19,7 @@ function App() {
         <Route path="/Beneficios" element={<Beneficios/>} />
         <Route path="/Productos-y-Servicios" element={<ProductosServicios/>} />
         <Route path="/Usos" element={<Usos/>} />
-        <Route path="/Noticias" element={<Usos/>} />
+        <Route path="/Noticias" element={<Noticias/>} />
       </Routes>
     </BrowserRouter>
   );

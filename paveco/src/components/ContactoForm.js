@@ -1,23 +1,29 @@
 import React from "react";
 import { Form, Button, FormGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Resend } from "resend";
 
 const ContactoForm = () => {
-  // Creamos una instancia del hook useForm
   const {
-    register, // Función para registrar los campos del formulario
-    handleSubmit, // Función para manejar el envío del formulario
-    formState: { errors }, // Objeto que contiene los errores de validación
+    register,
+    handleSubmit,
+    formState: { errors },
   } = useForm();
-
-  // Función que se ejecuta al enviar el formulario
-  const onSubmit = (data) => {
-    // data es un objeto que contiene los valores de los campos
-    console.log(data);
+  const resend = new Resend("re_WWa9LyAy_5YEsQQL5tjGaqB9HWUcCoi2G");
+  const onSubmit = async (data) => {
+    const email = await fetch(
+      resend.emails.send({
+        from: "onboarding@resend.dev",
+        to: "nemka201@gmail.com",
+        subject: "Hello World",
+        html: "<p>Prueba resend</strong>!</p>",
+        text: "",
+      })
+    );
   };
 
   return (
-    <div className="container form-consulta">
+    <div className="container-fluid form-consulta">
       <h1 className="text-center">Envianos tu consulta</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo de nombre */}
@@ -26,7 +32,6 @@ const ContactoForm = () => {
           <Form.Control
             type="text"
             placeholder="Ingresa tu nombre"
-            // Registramos el campo con su nombre y sus reglas de validación
             {...register("nombre", {
               required: "El nombre es obligatorio",
               maxLength: {
@@ -35,10 +40,30 @@ const ContactoForm = () => {
               },
             })}
           />
-          {/* Mostramos el mensaje de error si hay alguno */}
           {errors.nombre && (
             <Form.Text className="text-danger">
               {errors.nombre.message}
+            </Form.Text>
+          )}
+        </Form.Group>
+        {/* Campo de número de teléfono */}
+        <Form.Group className="mb-3">
+          <Form.Label>Teléfono</Form.Label>
+          <Form.Control
+            type="tel"
+            placeholder="Ingresa tu número de teléfono"
+            {...register("telefono", {
+              required: "El número de teléfono es obligatorio",
+              pattern: {
+                value: /^[0-9]{10}$/,
+                message: "El número de teléfono no es válido",
+              },
+            })}
+          />
+          {/* Mostramos el mensaje de error si hay alguno */}
+          {errors.telefono && (
+            <Form.Text className="text-danger">
+              {errors.telefono.message}
             </Form.Text>
           )}
         </Form.Group>
@@ -48,7 +73,6 @@ const ContactoForm = () => {
           <Form.Control
             type="email"
             placeholder="Ingresa tu email"
-            // Registramos el campo con su nombre y sus reglas de validación
             {...register("email", {
               required: "El email es obligatorio",
               pattern: {
@@ -57,7 +81,6 @@ const ContactoForm = () => {
               },
             })}
           />
-          {/* Mostramos el mensaje de error si hay alguno */}
           {errors.email && (
             <Form.Text className="text-danger">
               {errors.email.message}
@@ -71,7 +94,6 @@ const ContactoForm = () => {
             as="textarea"
             rows={10}
             placeholder="Ingresa tu mensaje"
-            // Registramos el campo con su nombre y sus reglas de validación
             {...register("mensaje", {
               required: "El mensaje es obligatorio",
               maxLength: {
@@ -80,7 +102,6 @@ const ContactoForm = () => {
               },
             })}
           />
-          {/* Mostramos el mensaje de error si hay alguno */}
           {errors.mensaje && (
             <Form.Text className="text-danger">
               {errors.mensaje.message}
@@ -92,17 +113,12 @@ const ContactoForm = () => {
             <Form.Label>Archivo</Form.Label>
             <Form.Control
               type="file"
-              // Registramos el campo con su nombre y sus reglas de validación
               {...register("archivo", {
-                // Eliminamos la regla required
                 validate: {
-                  // Función personalizada para validar el tipo de archivo
                   fileType: (value) => {
                     // Si no se sube ningún archivo, retornamos true
                     if (!value[0]) return true;
-                    // Obtenemos la extensión del archivo
                     const extension = value[0].name.split(".").pop();
-                    // Comprobamos si es una de las extensiones permitidas
                     const validExtensions = [
                       "pdf",
                       "jpg",
@@ -111,16 +127,13 @@ const ContactoForm = () => {
                       "docx",
                     ];
                     if (!validExtensions.includes(extension)) {
-                      // Si no es válida, retornamos un mensaje de error
                       return "El archivo debe ser PDF, JPG, PNG o Word";
                     }
-                    // Si es válida, retornamos true
                     return true;
                   },
                 },
               })}
             />
-            {/* Mostramos el mensaje de error si hay alguno */}
             {errors.archivo && (
               <Form.Text className="text-danger">
                 {errors.archivo.message}
@@ -128,7 +141,6 @@ const ContactoForm = () => {
             )}
           </Form.Group>
         </Form.Group>
-        {/* Botón de enviar */}
         <button className="btn btn-contacto btn-enviar mt-3" type="submit">
           Enviar
         </button>

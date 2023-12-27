@@ -2,11 +2,11 @@ import logo from "../assets/pavecoIcon.png";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg sticky-top navbar-gradient">
+      <nav className="navbar navbar-expand-lg navbar-gradient">
         <div className="container-fluid text-center">
           <div className="col-sm-2 col-md-4 col-lg-6 col-xl-7 text-start">
             <a className="navbar-brand ms-4" href="/">
-              <img src={logo} alt="Bootstrap" width="90" height="80.45"></img>
+              <img src={logo} alt="Bootstrap" width="145" height="115" className="drop-shadow"></img>
             </a>
             
           </div>

@@ -5,8 +5,7 @@ function BeneficiosComponent() {
     <>
       <div className="container-fluid bg-black">
         <div className="row">
-          <div className="col-1"></div>
-          <div className="col-10">
+          <div className="col-12 p-0 p-lg-3">
             <h1 className="titulo-beneficio text-center text-decoration-underline mt-5">
               BENEFICIOS Y VENTAJAS
             </h1>
@@ -26,11 +25,10 @@ function BeneficiosComponent() {
               <BeneficiosCard
                 b1="Ahorros significativos por el costo de reparar vías."
                 b2="Una vez colocado el producto se puede reanudar el tráfico inmediatamente."
-                b3="Se puede aplicar en forma directa en la superficie a repara (no precisa riego de imprimación o riego de liga)"
+                b3="Se puede aplicar en forma directa en la superficie a reparar (no precisa riego de imprimación o riego de liga)"
               />
             </div>
           </div>
-          <div className="col-1"></div>
         </div>
 
       </div>

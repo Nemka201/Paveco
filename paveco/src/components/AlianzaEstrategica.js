@@ -1,9 +1,9 @@
 function AlianzaEstrategica() {
   return (
     <>
-      <div className="container">
+      <div className="container pb-5">
         <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7">
             <div className="alianza-estrategica pt-5 text-black">
               <h1 className="">ALIANZA ESTRATÉGICA</h1>
               <h3 className="pt-2 pb-2">PRESENTACIÓN</h3>
