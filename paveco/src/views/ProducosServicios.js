@@ -1,21 +1,64 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/NavbarPaveco";
+import ProductoComponent from "../components/ProductoComponent";
 
 function ProductosServicios() {
   return (
     <>
-      <Navbar/>
-      <div className="container-fluid bg-black">
-        <div className="row">
-          <div className="col-1"></div>
-          <div className="col-10 text-decoration-underline titulo-beneficio text-center">
-            <h1 className="text-normal">Productos y Servicios</h1>
-            
+      <Navbar />
+      <div className="container-fluid noticias-first ps-4 pe-4 pt-4">
+        <div className="row bg-black border-top-15">
+          <div className="col-12 titulo text-center">
+            <h1 className="pt-5">Productos y Servicios</h1>
+            <div className="row ps-5 pe-1 pt-4">
+              <ProductoComponent
+                classContainer="text-black"
+                titulo="Bolsa 25Kg"
+                descripcion="Toda la calle"
+                precio="4000"
+                imagen="bolsa-25kg.jpg"
+              />
+              <ProductoComponent
+                classContainer="text-black"
+                titulo="Bolsa 25Kg"
+                descripcion="Toda la calle"
+                precio="4000"
+                imagen="bolsa-500kg.jpg"
+              />
+              <ProductoComponent
+                classContainer="text-black"
+                titulo="Bolsa 25Kg"
+                descripcion="Toda la calle"
+                precio="4000"
+                imagen="gasoil-g2.jpg"
+              />
+
+              <ProductoComponent
+                classContainer="text-black"
+                titulo="Bolsa 25Kg"
+                descripcion="Toda la calle"
+                precio="4000"
+                imagen="contenedores.jpg"
+              />
+              <ProductoComponent
+                classContainer="text-black"
+                titulo="Bolsa 25Kg"
+                descripcion="Toda la calle"
+                precio="4000"
+                imagen="equipos-ac30.jpg"
+              />
+              <ProductoComponent
+                classContainer="text-black"
+                titulo="Bolsa 25Kg"
+                descripcion="Toda la calle"
+                precio="4000"
+                imagen="containers-maritimos.jpg"
+              />
+            </div>
           </div>
-          <div className="col-1"></div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

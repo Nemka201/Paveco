@@ -46,7 +46,7 @@ export default function Carousel(props) {
         <div className="text-on-image">
           <h1 className="titulo-paveco">PAVECO</h1>
           <hr></hr>
-          <h5>ASFALTO ECOLÓGICO.</h5>
+          <h3 className="text-normal">ASFALTO ECOLÓGICO.</h3>
         </div>
       </div>
     </>

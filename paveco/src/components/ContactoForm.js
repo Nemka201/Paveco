@@ -24,11 +24,11 @@ const ContactoForm = () => {
 
   return (
     <div className="container-fluid form-consulta">
-      <h1 className="text-center">Envianos tu consulta</h1>
+      <h1 className="text-center text-anim-left">Envianos tu consulta</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo de nombre */}
         <Form.Group className="mb-3">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label className="text-anim-right">Nombre</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ingresa tu nombre"
@@ -48,7 +48,7 @@ const ContactoForm = () => {
         </Form.Group>
         {/* Campo de número de teléfono */}
         <Form.Group className="mb-3">
-          <Form.Label>Teléfono</Form.Label>
+          <Form.Label className="text-anim-right">Teléfono</Form.Label>
           <Form.Control
             type="tel"
             placeholder="Ingresa tu número de teléfono"
@@ -69,7 +69,7 @@ const ContactoForm = () => {
         </Form.Group>
         {/* Campo de email */}
         <Form.Group className="mb-3">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="text-anim-right">Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Ingresa tu email"
@@ -89,7 +89,7 @@ const ContactoForm = () => {
         </Form.Group>
         {/* Campo de mensaje */}
         <Form.Group className="mb-3">
-          <Form.Label>Mensaje</Form.Label>
+          <Form.Label className="text-anim-right">Mensaje</Form.Label>
           <Form.Control
             as="textarea"
             rows={10}
@@ -110,7 +110,7 @@ const ContactoForm = () => {
           <Form.Group />
           {/* Campo Archivo  */}
           <Form.Group className="mb-3">
-            <Form.Label>Archivo</Form.Label>
+            <Form.Label className="text-anim-right">Archivo</Form.Label>
             <Form.Control
               type="file"
               {...register("archivo", {
