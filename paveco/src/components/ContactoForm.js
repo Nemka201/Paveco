@@ -2,6 +2,8 @@ import React from "react";
 import { Form, Button, FormGroup } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Resend } from "resend";
+import axios from 'axios';
+import { EmailTemplate } from "./EmailTemplate";
 
 const ContactoForm = () => {
   const {
@@ -9,17 +11,20 @@ const ContactoForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const resend = new Resend("re_WWa9LyAy_5YEsQQL5tjGaqB9HWUcCoi2G");
   const onSubmit = async (data) => {
-    const email = await fetch(
-      resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "nemka201@gmail.com",
-        subject: "Hello World",
-        html: "<p>Prueba resend</strong>!</p>",
-        text: "",
-      })
-    );
+    axios.post('http://localhost:3030/Resend/Send',{
+      from: 'admin@resend.dev',
+      to: 'nemka201@gmail.com',
+      subject: 'PAVECO - PORTAL WEB',
+      html: <EmailTemplate nombre="Benjamin Rey"/>,
+      text: 'Paveco'
+    })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    })
   };
 
   return (

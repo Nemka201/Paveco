@@ -300,7 +300,6 @@ b-icon {
   color: white;
   margin: 0;
   padding: 0;
-
 }
 .text-anim-right{
   animation: text-anim-right 2s forwards;
@@ -373,9 +372,8 @@ b-icon {
 
 .navbar {
   font-family: var(--fuente-Oswald);
-  font-weight: 700;
   color: var(--color-white);
-  font-size: 18px;
+  font-size: 1em!important;
   word-wrap: normal;
 }
 
@@ -460,19 +458,43 @@ b-icon {
   }
 }
 @media only screen and (min-width: 350px){
-
+  .text-on-image {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
   .alianza-estrategica{
     font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 400px){
-
+  .text-on-image {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
   .alianza-estrategica{
     font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 768px) {
-
+  .text-on-image {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
   .alianza-estrategica{
     font-size: 1.66em;
   }
@@ -489,6 +511,15 @@ b-icon {
 }
 
 @media only screen and (min-width: 1200px) {
+  .text-on-image {
+    position: absolute;
+    top: 33%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
   .t-black {
     border-left: 30vh solid transparent;
     border-right: 30vh solid transparent;
