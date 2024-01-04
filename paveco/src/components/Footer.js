@@ -3,22 +3,25 @@ function Footer() {
     <>
       <div className="container-fluid bg-black">
         <div className="row text-white">
-          <div className="col-4 text-white text-normal align-self-center">
-            <p className="ps-3 pt-3">PAVECO ® - ASFALTO ECOLÓGICO</p>
+          <div className="col-7 col-md-6 col-lg-4 text-white text-normal align-self-center">
+            <p className="ps-3 pt-3 footer-text">PAVECO ® - ASFALTO ECOLÓGICO</p>
           </div>
-          <div className="col-8 text-end">
+          <div className="col-5 col-md-6 col-lg-8 text-end">
             <div className="social-media">
-              <a href="/">
-                <i class="fa-brands fa-whatsapp pe-3"></i>
+              <a href="https://wa.me/message/PWL5RB5BZEEKJ1">
+                <i class="fa-brands fa-whatsapp pe-1 pe-md-3"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61552672778681&mibextid=kFxxJD">
+                <i class="fa-brands fa-facebook pe-1 pe-md-3"></i>
+              </a>
+              <a href="https://www.instagram.com/paveco.asfalto?utm_source=qr&igsh=emh3MDRxMWJ0dGg1">
+                <i class="fa-brands fa-instagram pe-1 pe-md-3"></i>
               </a>
               <a href="/">
-                <i class="fa-brands fa-instagram pe-3"></i>
+                <i class="fa-brands fa-youtube pe-1 pe-md-3"></i>
               </a>
               <a href="/">
-                <i class="fa-brands fa-youtube pe-3"></i>
-              </a>
-              <a href="/">
-                <i class="fa-brands fa-tiktok pe-2"></i>
+                <i class="fa-brands fa-tiktok pe-1 pe-md-2"></i>
               </a>
             </div>
           </div>

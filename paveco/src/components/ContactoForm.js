@@ -1,39 +1,72 @@
 import React from "react";
-import { Form, Button, FormGroup } from "react-bootstrap";
+import { Form, Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Resend } from "resend";
-import axios from 'axios';
-import { EmailTemplate } from "./EmailTemplate";
+import axios from "axios";
+import EmailTemplate from "./EmailTemplate";
+import ReactDOMServer from "react-dom/server";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ContactoForm = () => {
+  const [showModal, setShowModal] = useState(false);
+  const handleCloseModal = () => {
+    setShowModal(false);
+    navigate("/");
+  };
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const CloseButton = ({ onClick }) => (
+    <button
+      className="btn btn-close"
+      type="button"
+      onClick={onClick}
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  );
   const onSubmit = async (data) => {
-    axios.post('http://localhost:3030/Resend/Send',{
-      from: 'admin@resend.dev',
-      to: 'nemka201@gmail.com',
-      subject: 'PAVECO - PORTAL WEB',
-      html: <EmailTemplate nombre="Benjamin Rey"/>,
-      text: 'Paveco'
-    })
-    .then(response => {
-      console.log(response);
-    })
-    .catch(error => {
-      console.log(error);
-    })
+    axios
+      .post("https://vast-puce-nightingale-wear.cyclic.app/Resend/Send", {
+        from: "admin@resend.dev",
+        to: "portalweb@paveco.com.ar",
+        subject: "PAVECO - PORTAL WEB",
+        html: ReactDOMServer.renderToString(
+          <EmailTemplate
+            nombre={data.nombre}
+            telefono={data.telefono}
+            mensaje={data.mensaje}
+            email={data.email}
+          />
+        ),
+        text: "Paveco",
+      })
+      .then((response) => {
+        setShowModal(true);
+      })
+      .catch((error) => {
+        alert("Error al enviar el formulario");
+      });
   };
-
   return (
     <div className="container-fluid form-consulta">
+      <Modal show={showModal} onHide={handleCloseModal} backdrop="static">
+        <Modal.Header closeButton>
+          <Modal.Title className="text-center">Se envió correctamente el formulario</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">Estas volviendo a Home</Modal.Body>
+        <Modal.Footer>
+        </Modal.Footer>
+      </Modal>
       <h1 className="text-center text-anim-left">Envianos tu consulta</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo de nombre */}
         <Form.Group className="mb-3">
-          <Form.Label className="text-anim-right">Nombre</Form.Label>
+          <Form.Label className="text-anim-right">Nombre Completo</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ingresa tu nombre"

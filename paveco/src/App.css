@@ -17,6 +17,34 @@
 a {
   color:unset;
 }
+body{
+  background-color: black;
+}
+table, td,th {
+  border: 3px solid white;
+  height: 80px; 
+  text-align: center;
+  cursor: pointer;
+}
+tr {
+  text-align: center;
+  height: 80px;
+}
+table{
+  background-image: url(./assets/bg-card1.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color:white;
+  text-shadow: 3px 3px 1px black;
+  font-size: 1em;
+  box-shadow: 0px 0px 100px var(--color-secundario);
+}
+td{
+  text-align: center;
+}
+
 .bg-presentacion{
   background-image: url(./assets/fondo-presentacion.jpg);
   filter:brightness(100%);
@@ -245,6 +273,7 @@ a {
   border-radius: 5px 5px 5px 5px;
 }
 .b-card {
+  position: relative;
   background-color: var(--color-secundario);
   border-radius: 15px;
   padding: 1.2em;
@@ -253,6 +282,31 @@ a {
   border: 1px solid rgb(179, 179, 179);
   text-shadow: 2px 2px 1px black;
   transition: all 0.5s ease;
+}
+.usos-c{
+  transition: all 1s ease;
+  position: relative;
+}
+.b-card:hover::before{
+  position: absolute;
+  content: "";
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/bg-card1.jpg);
+  border-radius:15px;
+  filter:blur(1px) brightness(50%);
+  transform: scale(1.02 - 1);
+  transition: all .5s ease;
+  color:white;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+}
+
+.b-text{
+  position: relative;
 }
 b-icon {
   text-shadow: 6px 6px 3px rgb(45, 45, 45);
@@ -270,7 +324,6 @@ b-icon {
 }
 .b-animacion{
   animation: b-inside 2s 1;
-
 }
 @keyframes b-inside {
   0% {
@@ -397,7 +450,7 @@ b-icon {
   transition: all 0.5s ease;
 }
 .btn-contacto {
-  border-radius: 40px;
+  border-radius: 25px;
   color: var(--color-white);
   background-color: var(--color-secundario);
   font-size: 18px;
@@ -439,53 +492,198 @@ b-icon {
 .contacto {
   background-color: var(--color-secundario);
 }
-
-
+.text-shadow{
+  text-shadow: 3px 3px 2px black;
+}
+.box-shadow{
+  box-shadow: 3px 3px 2px black;
+}
 @media screen and (max-width:600px) {
-  .t-black {
-    border-left: 25vh solid transparent;
-    border-right: 25vh solid transparent;
-    border-bottom: 6.25em solid rgb(0, 0, 0);
-  }
-  .t-black-i {
-    border-left: 25vh solid transparent;
-    border-right: 25vh solid transparent;
-    border-bottom: 6.25em solid rgb(0, 0, 0);
-  }
   .text-on-image {
     top: 50%;
     left: 50%;
   }
 }
 @media only screen and (min-width: 350px){
+  .navbar-icon{
+    display: none;
+  }
   .text-on-image {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     margin: 0;
     padding: 0;
+  }
+  .alianza-estrategica{
+    font-size: 1.3em;
+  }
+  .social-media{
+    font-size: 2.5em;
+  }
+  .footer-text{
+    font-size: 0.6em;
+    text-shadow: 0px 0px 15px var(--color-hover);
+  }
+  .usos-c{
+    background-image: unset;
+    cursor: pointer;
+    transition: all 1s ease;
+    backdrop-filter: blur(15px) sepia(75%);    
+    position: relative;
+  }
+  .usos-c:hover::before{
+    position: absolute;
+    content: "";
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/u-card1.jpg);
+    filter:blur(4px) sepia(50%);
+    transform: scale(1.02);
+    transition: all .5s ease;
+    color:white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .usos-c-2:hover::before{
+    position: absolute;
+    content: "";
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/u-card2.jpg)!important;
+    filter:blur(4px) sepia(50%);
+    transform: scale(1.02);
+    transition: all .5s ease;
+    color:white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .usos-c-3:hover::before{
+    position: absolute;
+    content: "";
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/u-card3.jpg)!important;
+    filter:blur(4px) sepia(50%);
+    transform: scale(1.02);
+    transition: all .5s ease;
+    color:white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .usos-c-4:hover::before{
+    position: absolute;
+    content: "";
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/u-card4.jpg)!important;
+    filter:blur(4px) sepia(50%);
+    transform: scale(1.02);
+    transition: all .5s ease;
+    color:white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .usos-t{
+    position: relative;
+  }
+  .usos-c:hover h2 ,.usos-c:hover .fa-solid{
+    color:white;
+    transition: all .5s ease;
+    text-shadow: 2px 2px 1px black;
+  }
+}
+@media only screen and (min-width: 275px){
+  .navbar-icon{
+    display: none;
+  }
+  #navbar-links{
+    flex-direction: column!important;
+    font-size: 10px;
+    padding: 0 0 0 0!important;
+  }
+  .btn-contacto {
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 8px;
+  }
+  .text-on-image {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 0.5em;
   }
   .alianza-estrategica{
     font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 400px){
+  .navbar-icon{
+    display: none;
+  }
+  #navbar-links{
+    flex-direction: row!important;
+    font-size: 10px;
+    padding: 0 0 0 0!important;
+  }
+  .btn-contacto {
+    border-radius: 15px;
+    font-size: 10px;
+    padding: 8px;
+  }
   .text-on-image {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     margin: 0;
     padding: 0;
+    font-size: 0.8em;
   }
   .alianza-estrategica{
     font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 768px) {
+  .btn-contacto {
+    border-radius: 25px;
+    color: var(--color-white);
+    background-color: var(--color-secundario);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 25px 8px 25px;
+    transition: all 0.5s ease;
+  }
+  #navbar-links{
+    flex-direction: row!important;
+    font-size: 1em;
+    padding: 0 0 0 0!important;
+  }
+  .navbar-icon{
+    display: none;
+  }
+  #navbar-links{
+    display:flex;
+    flex-direction: row!important;
+  }
   .text-on-image {
     position: absolute;
     top: 45%;
@@ -504,9 +702,22 @@ b-icon {
 }
 
 @media only screen and (min-width: 992px) {
-
+  .navbar-icon{
+    display: flex;
+  }
+  #navbar-links{
+    display:flex;
+    flex-direction: row!important;
+  }
   .producto-imagen{
     width: 26vw;  
+  }
+  table{
+    font-size: 130%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 

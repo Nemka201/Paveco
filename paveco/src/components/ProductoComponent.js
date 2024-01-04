@@ -1,6 +1,3 @@
-import Footer from "./Footer";
-import Navbar from "./NavbarPaveco";
-
 function ProductoComponent(props) {
   const classContainer = `col-6 col-md-6 col-lg-4 col-xl-4 ${props.classContainer} p-0`;
   const image = props.imagen;

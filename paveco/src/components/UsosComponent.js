@@ -1,5 +1,5 @@
 function UsosComponent(props) {
-  const classContainer = `col-12 col-lg-6 ${props.classContainer} p-5 animacion-img`;
+  const classContainer = `col-12 col-lg-6 ${props.classContainer} p-5 animacion-img usos-c`;
   const image = props.image;
 
   return (
@@ -8,11 +8,11 @@ function UsosComponent(props) {
         <section>
           <div className="text-center p-0">
             <i
-              class="fa-solid fa-circle-down text-center pt-0 pb-4"
+              class="fa-solid fa-circle-down text-center pt-0 pb-4 usos-t"
               style={{ fontSize: "55px" }}
             ></i>
           </div>
-          <h2 className="text-center">{props.text}</h2>
+          <h2 className="text-center usos-t">{props.text}</h2>
           {image ? (
             <img
               src={require(`../assets/usos/${image}`)}

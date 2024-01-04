@@ -1,6 +1,7 @@
 import ContactoForm from "../components/ContactoForm";
 import Navbar from "../components/NavbarPaveco";
 import Footer from "../components/Footer";
+import EmailTemplate from "../components/EmailTemplate";
 
 function Contacto() {
   return (
@@ -11,6 +12,7 @@ function Contacto() {
           <div className="col-12 col-lg-12">
             <ContactoForm />
           </div>
+          {/* <EmailTemplate nombre="Benjamin Rey" telefono="3816326116" mensaje="Holaas" email="nemka201@gmail.com"/> */}
           {/* <div className="col-12 col-lg-6 text-black bg-white border-top">
           <div className="informacion-contacto text-center p-3">
               <h2>Números de contacto:</h2>
