@@ -3,8 +3,8 @@ function CuadroComparativo({ ...props }) {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 text-black p-4 text-anim-top">
-            <div className="tabla-comparativa-titulo text-anim-left">
+          <div className="col-12 text-black p-0 p-lg-4">
+            <div className="tabla-comparativa-titulo">
               <h1 className="text-white text-black text-center ">
                 TABLA COMPARATIVA
               </h1>

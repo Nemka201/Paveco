@@ -31,7 +31,7 @@ tr {
   height: 80px;
 }
 table{
-  background-image: url(./assets/bg-card1.jpg);
+  background-image: url(./assets/img/bg-ficha.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +44,13 @@ table{
 td{
   text-align: center;
 }
-
+.presentacion-img{
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+  border: 1px solid var(--color-secundario);
+  margin-bottom: 4em;
+}
 .bg-presentacion{
   background-image: url(./assets/fondo-presentacion.jpg);
   filter:brightness(100%);
@@ -193,7 +199,7 @@ td{
   font-family: var(--fuente-Oswald);
   color: var(--color-white);
   text-shadow: 2px 2px 1px black;
-  font-size:1.5em;
+  font-size:1.9em;
 }
 .text-usos{
   font-size:1.5em;
@@ -242,6 +248,16 @@ td{
   border-bottom: 1px solid var(--color-hover);
   border-radius: 20px 20px 0px 0px;
 }
+.alianza-img{
+  border-radius: 50%;
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+  margin-left: 5em;
+  margin-top: 2em;
+  border: 1px solid var(--color-secundario);
+  box-shadow: 1px 1px -1px var(--color-secundario);
+}
 .noticia-card {
   font-family: var(--fuente-Oswald);
   background: black;
@@ -255,6 +271,7 @@ td{
 }
 .noticia-card h3{
   font-weight: 300;
+  font-size: 1.4em;
 }
 .noticias-first {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 40%, rgb(47, 255, 0) 100%);
@@ -265,9 +282,7 @@ td{
   height: 550px;
   object-fit: cover;
   filter: brightness(100%);
-  padding-left: 0;
-  padding-top: 0px;
-  padding-right: 0;
+  border: 1px solid var(--color-secundario);
   margin: 20px 0 0 0;
   position: relative;
   border-radius: 5px 5px 5px 5px;
@@ -277,7 +292,7 @@ td{
   background-color: var(--color-secundario);
   border-radius: 15px;
   padding: 1.2em;
-  min-height: 100%;
+  min-height: 105%;
   cursor: pointer;
   border: 1px solid rgb(179, 179, 179);
   text-shadow: 2px 2px 1px black;
@@ -295,7 +310,7 @@ td{
   height: 100%;
   background-image: url(./assets/bg-card1.jpg);
   border-radius:15px;
-  filter:blur(1px) brightness(50%);
+  filter:blur(3px) brightness(30%);
   transform: scale(1.02 - 1);
   transition: all .5s ease;
   color:white;
@@ -355,19 +370,19 @@ b-icon {
   padding: 0;
 }
 .text-anim-right{
-  animation: text-anim-right 2s forwards;
+  animation: text-anim-right 1s forwards;
 }
 .text-anim-right-2{
-  animation: text-anim-right-2 2s forwards;
+  animation: text-anim-right-2 1s forwards;
 }
 .text-anim-left{
-  animation: text-anim-left 2s forwards;
+  animation: text-anim-left 1s forwards;
 }
 .text-anim-top{
-  animation: text-anim-top 2s forwards;
+  animation: text-anim-top 1s forwards;
 }
 .text-anim-bot{
-  animation: text-anim-bot 2s forwards;
+  animation: text-anim-bot 1s forwards;
 }
 @keyframes escribir {
   0% {
@@ -541,8 +556,7 @@ b-icon {
     width: 100%;
     height: 100%;
     background-image: url(./assets/u-card1.jpg);
-    filter:blur(4px) sepia(50%);
-    transform: scale(1.02);
+    filter:blur(7px) sepia(50%);
     transition: all .5s ease;
     color:white;
     background-repeat: no-repeat;
@@ -557,7 +571,6 @@ b-icon {
     height: 100%;
     background-image: url(./assets/u-card2.jpg)!important;
     filter:blur(4px) sepia(50%);
-    transform: scale(1.02);
     transition: all .5s ease;
     color:white;
     background-attachment: fixed;
@@ -573,7 +586,6 @@ b-icon {
     height: 100%;
     background-image: url(./assets/u-card3.jpg)!important;
     filter:blur(4px) sepia(50%);
-    transform: scale(1.02);
     transition: all .5s ease;
     color:white;
     background-attachment: fixed;
@@ -589,7 +601,6 @@ b-icon {
     height: 100%;
     background-image: url(./assets/u-card4.jpg)!important;
     filter:blur(4px) sepia(50%);
-    transform: scale(1.02);
     transition: all .5s ease;
     color:white;
     background-attachment: fixed;
@@ -625,6 +636,7 @@ b-icon {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 0.7em;
     color: white;
     margin: 0;
     padding: 0;
@@ -635,6 +647,7 @@ b-icon {
   }
 }
 @media only screen and (min-width: 400px){
+
   .navbar-icon{
     display: none;
   }
@@ -652,11 +665,19 @@ b-icon {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
     color: white;
     margin: 0;
     padding: 0;
     font-size: 0.8em;
+  }
+  .text-on-image {
+    h1 {
+      font-size: 5em;
+    }
+    h3 {
+      font-size: 2em;
+    }
   }
   .alianza-estrategica{
     font-size: 1.3em;

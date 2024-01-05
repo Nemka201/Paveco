@@ -6,7 +6,7 @@ function UsosComponent(props) {
     <>
       <div className={classContainer}>
         <section>
-          <div className="text-center p-0">
+          <div className="text-center pb-4">
             <i
               class="fa-solid fa-circle-down text-center pt-0 pb-4 usos-t"
               style={{ fontSize: "55px" }}

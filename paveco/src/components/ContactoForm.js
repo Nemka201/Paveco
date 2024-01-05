@@ -41,6 +41,7 @@ const ContactoForm = () => {
             telefono={data.telefono}
             mensaje={data.mensaje}
             email={data.email}
+            imagen={data.archivo}
           />
         ),
         text: "Paveco",

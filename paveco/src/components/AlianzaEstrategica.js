@@ -1,17 +1,12 @@
+import logoAlianza from "../assets/img/alianza-estrategica.jpg";
+
 function AlianzaEstrategica() {
   return (
     <>
       <div className="container-fluid bg-presentacion">
-        <div className="row">
-          <div className="col-1 col-md-4"></div>
-          <div className="col-10 col-md-4">
-            <div className="t-black"></div>
-          </div>
-          <div className="col-1 col-md-4"></div>
-        </div>
         <div className="container pb-5 p-0">
           <div className="row">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
               <div className="alianza-estrategica pt-5 text-white text-shadow">
                 <h1 className="">ALIANZA ESTRATÉGICA</h1>
                 <h3 className="pt-2 pb-2">PRESENTACIÓN</h3>
@@ -25,6 +20,9 @@ function AlianzaEstrategica() {
                 </p>
               </div>
             </div>
+            <div className="col-xl-5 col-6 pt-5">
+                <img src={logoAlianza} className="alianza-img"></img>
+              </div>
           </div>
         </div>
       </div>

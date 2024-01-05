@@ -52,6 +52,7 @@ const EmailTemplate = (props) => {
             <h3 style={{color:"white"}}>
               <a href={props.link}>Link del archivo:</a>
             </h3>
+            <img src={require(props.imagen)}></img>
             <hr style={{color:"white"}}></hr>
             <h5 style={{color:"white"}}>
               Este mensaje se envió de manera automática desde el Landing Page

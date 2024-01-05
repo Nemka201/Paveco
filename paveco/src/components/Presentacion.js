@@ -1,23 +1,16 @@
-import pavecoFoto from "../assets/img/paveco_1.png";
+import pavecoFoto from "../assets/presentacion/presentacion.gif";
 
 function Presentacion() {
   return (
     <>
-      <div className="container-fluid bg-black mt-0" id="border-verde-presentacion">
-        <div className="row">
-          <div className="col-1 col-md-4"></div>
-          <div className="col-10 col-md-4">
-            <div className="t-black-i"></div>
-          </div>
-          <div className="col-1 col-md-4"></div>
-        </div>
+      <div className="container-fluid bg-black mt-0 pt-5">
         <div className="col-12">
           <div className="row m-0 pt-0 pe-lg-4 pe-2">
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 object-fit-cover mt-3 text-center">
               <img
                 src={pavecoFoto}
                 alt="Paveco"
-                className="animacion-img"
+                className="presentacion-img mt-5"
               ></img>
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-4 ps-md-5 pb-5 text-anim-right" >
