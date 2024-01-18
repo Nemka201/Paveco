@@ -49,10 +49,7 @@ const EmailTemplate = (props) => {
             <h3 style={{color:"white"}}><strong>Teléfono</strong>: {props.telefono}</h3>
             <h3 style={{color:"white"}}><strong>Correo Electrónico</strong>: {props.email}</h3>
             <h3 style={{color:"white"}}><strong>Mensaje</strong>: {props.mensaje}</h3>
-            <h3 style={{color:"white"}}>
-              <a href={props.link}>Link del archivo:</a>
-            </h3>
-            <img src={require(props.imagen)}></img>
+            <img src={`data:image/png;base64,${props.imagen}`} alt="imagen" />
             <hr style={{color:"white"}}></hr>
             <h5 style={{color:"white"}}>
               Este mensaje se envió de manera automática desde el Landing Page

@@ -1,13 +1,15 @@
 import React from "react";
-import { Form, Modal } from "react-bootstrap";
-import { useForm } from "react-hook-form";
 import axios from "axios";
 import EmailTemplate from "./EmailTemplate";
+import Compress from "compress.js";
 import ReactDOMServer from "react-dom/server";
+import { Form, Modal } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const ContactoForm = () => {
+  const reader = new FileReader();
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => {
     setShowModal(false);
@@ -30,29 +32,44 @@ const ContactoForm = () => {
     </button>
   );
   const onSubmit = async (data) => {
-    axios
-      .post("https://vast-puce-nightingale-wear.cyclic.app/Resend/Send", {
-        from: "admin@resend.dev",
-        to: "portalweb@paveco.com.ar",
-        subject: "PAVECO - PORTAL WEB",
-        html: ReactDOMServer.renderToString(
-          <EmailTemplate
-            nombre={data.nombre}
-            telefono={data.telefono}
-            mensaje={data.mensaje}
-            email={data.email}
-            imagen={data.archivo}
-          />
-        ),
-        text: "Paveco",
+    const compress = new Compress();
+    compress
+      .compress([data.archivo[0]], {
+        size: 0.5,
+        quality: 0.75,
+        resize: "jpeg",
       })
-      .then((response) => {
-        setShowModal(true);
+      .then((results) => {
+        const result = results[0];
+        const imagenBase64 = result.data;
+        axios
+          .post("https://vast-puce-nightingale-wear.cyclic.app/Resend/Send", {
+            from: "admin@resend.dev",
+            to: "portalweb@paveco.com.ar",
+            subject: "PAVECO - PORTAL WEB",
+            html: ReactDOMServer.renderToString(
+              <EmailTemplate
+                nombre={data.nombre}
+                telefono={data.telefono}
+                mensaje={data.mensaje}
+                email={data.email}
+                imagen={imagenBase64}
+              />
+            ),
+            text: "Paveco",
+          })
+          .then((response) => {
+            setShowModal(true);
+          })
+          .catch((error) => {
+            alert("Error al enviar el formulario");
+          });
       })
       .catch((error) => {
-        alert("Error al enviar el formulario");
+        console.error(error);
       });
   };
+  
   return (
     <div className="container-fluid form-consulta">
       <Modal show={showModal} onHide={handleCloseModal} backdrop="static">
@@ -159,11 +176,8 @@ const ContactoForm = () => {
                     if (!value[0]) return true;
                     const extension = value[0].name.split(".").pop();
                     const validExtensions = [
-                      "pdf",
                       "jpg",
-                      "png",
-                      "doc",
-                      "docx",
+                      "png"
                     ];
                     if (!validExtensions.includes(extension)) {
                       return "El archivo debe ser PDF, JPG, PNG o Word";
