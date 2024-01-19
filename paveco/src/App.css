@@ -3,8 +3,7 @@
 
 :root {
   --color-principal: #00ff22;
-  /* --color-hover: #03c27f; */
-  --color-hover: #00ff22;
+  --color-hover: #008814;
   --color-secundario: #7a7a7a;
   --color-texto: black;
   --color-white: rgb(255, 255, 255);
@@ -44,7 +43,8 @@ tr {
 }
 
 table {
-  background-image: url(./assets/img/bg-ficha.jpg);
+  /* background-image: url(./assets/img/bg-ficha.jpg); */
+  background-color: var(--color-verde-oscuro);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,7 +52,6 @@ table {
   color: white;
   text-shadow: 3px 3px 1px black;
   font-size: 1em;
-  box-shadow: 0px 0px 100px var(--color-secundario);
 }
 
 td {
@@ -120,7 +119,7 @@ td {
 
 .fa-brands:hover {
   transition: all 0.5s ease;
-  color: #00ff22;
+  color: var(--color-hover);
   transform: scale(1.2);
   filter: drop-shadow(6px 6px 10px var(--color-secundario));
 
@@ -331,7 +330,8 @@ td {
 }
 
 .noticias-first {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 40%, rgb(47, 255, 0) 100%);
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 1) 40%, rgb(47, 255, 0) 100%); */
+  background-color: var(--color-verde-medio);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a7a7a", endColorstr="#1e5155", GradientType=1);
 }
 
@@ -362,7 +362,11 @@ td {
   transition: all 1s ease;
   position: relative;
 }
+.bg-green{
+  background-color: var(--color-verde-oscuro);
+  border: 1px solid var(--color-verde-brillante);
 
+}
 .b-card:hover::before {
   position: absolute;
   content: "";
@@ -392,7 +396,7 @@ b-icon {
 
 .b-card:hover {
   text-shadow: 2px 2px 1px black;
-  box-shadow: 4px 4px 35px var(--color-principal);
+  box-shadow: 4px 4px 35px var(--color-hover);
   transform: scale(1.015);
   transition: all 0.5s ease;
 }
@@ -575,7 +579,7 @@ b-icon {
 }
 
 .btn-contacto:hover {
-  background-color: var(--color-principal);
+  background-color: var(--color-hover);
   color: var(--color-white);
   box-shadow: 15px 15px 100px var(--color-secundario);
   text-shadow: 2px 2px 5px black;

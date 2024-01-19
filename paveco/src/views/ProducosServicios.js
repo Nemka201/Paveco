@@ -7,7 +7,7 @@ function ProductosServicios() {
     <>
       <Navbar />
       <div className="container-fluid noticias-first ps-4 pe-4 pt-4">
-        <div className="row bg-black border-top-15">
+        <div className="row bg-green border-top-15">
           <div className="col-12 titulo text-center">
             <h1 className="pt-5">Productos</h1>
             <div className="row ps-5 pe-1 pt-4">
