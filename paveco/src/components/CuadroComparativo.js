@@ -1,16 +1,16 @@
 function CuadroComparativo({ ...props }) {
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid ">
         <div className="row">
-          <div className="col-12 text-black p-0 p-lg-4">
+          <div className="col-12 text-black p-0 mt-5 p-lg-4">
             <div className="tabla-comparativa-titulo">
-              <h1 className="text-white text-black text-center ">
+              <h2 className="text-white text-black text-center ">
                 TABLA COMPARATIVA
-              </h1>
-              <h2 className="text-white text-black text-center pb-5 mb-5">
-                ASFALTO EN CALIENTE VS ASFALTO EN FRIO
               </h2>
+              <h3 className="text-white text-black text-center mb-5">
+                ASFALTO EN CALIENTE VS ASFALTO EN FRIO
+              </h3>
             </div>
 
             <section>

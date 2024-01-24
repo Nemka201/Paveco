@@ -21,7 +21,7 @@ function AlianzaEstrategica() {
               </div>
             </div>
             <div className="col-xl-5 col-6 pt-5">
-                <img src={logoAlianza} className="alianza-img"></img>
+                {/* <img src={logoAlianza} className="alianza-img"></img> */}
               </div>
           </div>
         </div>

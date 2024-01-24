@@ -6,19 +6,19 @@ function Presentacion() {
       <div className="container-fluid bg-black mt-0 pt-5">
         <div className="col-12">
           <div className="row m-0 pt-0 pe-lg-4 pe-2">
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 object-fit-cover mt-3 text-center">
-              <img
+            <div className="col-sm-12 col-md-12 col-lg-5 col-xl-5 object-fit-cover mt-3 text-center">
+              {/* <img
                 src={pavecoFoto}
                 alt="Paveco"
                 className="presentacion-img mt-5"
-              ></img>
+              ></img> */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-4 ps-md-5 pb-5 text-anim-right" >
+            <div className="col-sm-12 col-md-12 col-lg-7 col-xl-7 mt-4 ps-md-5 pb-5 pe-5 text-anim-right" >
               <section>
                 <h1 className="ecopav mt-0 ps-3 ps-lg-5 ps-xl-5 text-center pb-4">
                   ECO PAV
                 </h1>
-                <h2 className="text-normal mt-2 ps-3 ps-lg-5 ps-xl-5 pb-2">
+                <h2 className="text-normal mt-2 ps-3 ps-lg-5 ps-xl-5 pb-2 text-white-p">
                   Es un Superpave modificado con biopolímeros de alto
                   rendimiento formulado con aditivos especiales, que permite
                   fabricar asfalto frio al ser mezclado con agregados minerales

@@ -1,10 +1,13 @@
 import tabla1 from "../assets/img/especificaciones-1.png";
 import tabla2 from "../assets/img/especificaciones-2.png";
+import tabla1Mobile from "../assets/img/especificaciones-1-mobile.png";
+import tabla2Mobile from "../assets/img/especificaciones-2-mobile.png";
+
 function FichaTecnicaComponent() {
   return (
-    <div className="container-fluid noticias-first text-center pe-4 ps-4 pt-4">
-      <div className="row bg-black border-top-15 pb-5 " id="border-verde">
-        <div className="col-12 bg-black text-white ficha-card pt-5 border-top-15 text-anim-left">
+    <div className="container-fluid banner text-center pe-4 ps-4 pt-4">
+      <div className="row border-top-15 pb-0">
+        <div className="col-12 banner text-white-p ficha-card pt-5 border-top-15 text-anim-left">
           <section>
             <h1 className="pb-3">FICHA TÉCNICA</h1>
             <h3 className="text-decoration-underline pb-2">ESPECIFICACIONES</h3>
@@ -14,19 +17,24 @@ function FichaTecnicaComponent() {
               del Sur y Caribe. Contamos con certificaciones internacionales,
               cumpliendo con estándares como AASHTO M208, ASTM D2397 y
               normativas de diversos departamentos de transporte, como también
-              estudios internacionales de CONCREMAT, PASSARELLI y JBA.
+              estudios internacionales de CONCREMAT, PASSARELLI y JBA.
             </p>
             <img
               src={tabla1}
               alt="Especificaciones"
               className="i-tabla mt-3 mb-5"
             ></img>
+                        <img
+              src={tabla1Mobile}
+              alt="Especificaciones"
+              className="i-tabla-mobile mt-3 mb-5"
+            ></img>
           </section>
         </div>
       </div>
       <div className="row p-0 pb-0">
-        <div className="col-12 bg-ficha text-white text-normal pb-5">
-          <section className="text-anim-right-2">
+        <div className="col-12 bg-ficha text-white-p text-normal pb-5">
+          <section>
             <h1 className="text-decoration-underline pt-4">MANEJO</h1>
             <p className="">
               <i class="fa-solid fa-circle-arrow-right pe-3"></i>Proteja la
@@ -45,6 +53,11 @@ function FichaTecnicaComponent() {
               src={tabla2}
               alt="Especificaciones"
               className="i-tabla mt-3 mb-5"
+            ></img>
+              <img
+              src={tabla2Mobile}
+              alt="Especificaciones"
+              className="i-tabla-mobile mt-3 mb-5 pe-3"
             ></img>
           </section>
           <div className="mb-3"></div>

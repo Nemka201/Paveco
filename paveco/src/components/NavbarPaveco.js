@@ -43,7 +43,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item pe-1 mt-0 mb-2">
                   <a className="nav-link mt-2" href="/Contacto">
-                    <button className="btn btn-contacto text-shadow box-shadow">CONTACTO</button>
+                    <button className="btn btn-contacto">CONTACTO</button>
                   </a>
                 </li>
               </ul>

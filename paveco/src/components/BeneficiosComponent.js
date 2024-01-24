@@ -3,10 +3,10 @@ import BeneficiosCard from "./BeneficiosCard";
 function BeneficiosComponent() {
   return (
     <>
-      <div className="container-fluid noticias-first pe-4 ps-4 pt-4">
+      <div className="container-fluid banner pe-4 ps-4 pt-4">
         <div className="row bg-black border-top-15">
           <div className="col-12 p-0 p-lg-3">
-            <h1 className="titulo text-center text-decoration-underline mt-5">
+            <h1 className="titulo text-center mt-5">
               BENEFICIOS Y VENTAJAS
             </h1>
             <div className="row mb-5">

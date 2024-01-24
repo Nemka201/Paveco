@@ -1,5 +1,5 @@
 function UsosComponent(props) {
-  const classContainer = `col-12 col-lg-6 ${props.classContainer} p-5 animacion-img usos-c`;
+  const classContainer = `col-12 col-lg-6 ${props.classContainer} p-5 usos-c`;
   const image = props.image;
 
   return (

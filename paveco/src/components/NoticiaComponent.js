@@ -1,13 +1,13 @@
 function NoticiaComponent(props) {
-  const classContainer = `container-fluid ${props.classContainer} p-2`;
-  const classCard = `col-12 noticia-card ${props.classCard} ps-5 pe-5 pt-3`;
+  const classContainer = `container ${props.classContainer} p-2 pt-0 mt-0`;
+  const classCard = `col-12 noticia-card ${props.classCard} ps-5 pe-5 pt-3 pb-2`;
   const image = props.image;
   return (
     <>
       <div className={classContainer}>
         <div className="row p-3 pt-0">
           <div className={classCard}>
-            <h1 className="text-center text-black">{props.titulo}</h1>
+            <h2 className="text-center text-black">{props.titulo}</h2>
             <div className="description text-oswald">
               <h3>{props.descripcion1}</h3>
               <h3>{props.descripcion2}</h3>

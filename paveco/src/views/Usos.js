@@ -6,7 +6,7 @@ function Usos() {
   return (
     <>
       <Navbar />
-      <div className="container-fluid noticias-first p-4">
+      <div className="container-fluid banner p-4">
         <div className="row bg-black border-top-15">
           <div className="col-12">
             <h1 className="titulo text-center pb-4 pt-4 text-anim-right">USOS</h1>
