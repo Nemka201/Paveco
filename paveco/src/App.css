@@ -29,6 +29,9 @@ a {
 body {
   background-color: black;
 }
+p {
+  text-indent: 0.5cm;
+}
 
 table,
 td,
@@ -61,6 +64,8 @@ td {
 }
 .description {
   color: var(--color-texto);
+  font-family: var(--fuente-Oswald);
+  font-size: 1.2em;
 }
 .text-date {
   color: var(--color-texto);
@@ -298,7 +303,6 @@ td {
 }
 
 .c-banner {
-  background-color: rgba(3, 194, 127, 0.5);
   border-radius: 10px 10px 0px 0px;
   filter: brightness(75%);
   height: 800px;
@@ -306,7 +310,7 @@ td {
   object-fit: cover;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 0px;
+  padding-top: 0;
   position: relative;
   width: 100%;
 }

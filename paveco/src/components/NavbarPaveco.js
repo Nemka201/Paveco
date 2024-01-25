@@ -13,32 +13,32 @@ function Navbar() {
               <ul className="navbar-nav align-items-center ps-5 pe-3" id="navbar-links">
                 <li className="nav-item mt-0 pe-1">
                   <a className="nav-link" href="/">
-                    Home
+                    HOME
                   </a>
                 </li> 
                 <li className="nav-item mt-0 pe-1">
                   <a className="nav-link" href="/Beneficios">
-                    Beneficios
+                    BENEFICIOS
                   </a>
                 </li>
                 <li className="nav-item mt-0 pe-1">
                   <a className="nav-link" href="/Productos-y-Servicios">
-                    Productos Servicios
+                    PRODUCTOS Y SERVICIOS
                   </a>
                 </li>
                 <li className="nav-item mt-0 pe-1">
                   <a className="nav-link" href="/Usos">
-                    Usos
+                    USOS
                   </a>
                 </li>
                 <li className="nav-item mt-0 pe-1">
                   <a className="nav-link ficha-t" href="/Ficha-Tecnica">
-                    Ficha Técnica
+                    FICHA TECNICA
                   </a>
                 </li>
                 <li className="nav-item mt-0 pe-1">
                   <a className="nav-link" href="/Noticias">
-                    Noticias
+                    NOTICIAS
                   </a>
                 </li>
                 <li className="nav-item pe-1 mt-0 mb-2">
