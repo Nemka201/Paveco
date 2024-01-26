@@ -6,9 +6,7 @@ import Navbar from "../components/NavbarPaveco";
 function FichaTecnica() {
   return (
     <>
-      <Navbar />
       <FichaTecnicaComponent/>
-      <Footer/>
     </>
   );
 }

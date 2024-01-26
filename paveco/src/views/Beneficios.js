@@ -6,10 +6,10 @@ import Navbar from "../components/NavbarPaveco";
 function Beneficios() {
   return (
     <>
-      <Navbar/>
-      <BeneficiosComponent/>
-      <CuadroComparativo/>
-      <Footer/>
+      <div className="container-fluid bg-gradient" id="beneficios">
+        <BeneficiosComponent />
+        <CuadroComparativo />
+      </div>
     </>
   );
 }

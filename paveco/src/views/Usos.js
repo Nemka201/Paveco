@@ -5,11 +5,10 @@ import UsosComponent from "../components/UsosComponent";
 function Usos() {
   return (
     <>
-      <Navbar />
-      <div className="container-fluid banner p-4">
-        <div className="row bg-black border-top-15">
+      <div className="container-fluid bg-black p-4" id="usos">
+        <div className="row bg-black p-4 pt-0">
           <div className="col-12">
-            <h1 className="titulo text-center pb-4 pt-4 text-anim-right">USOS</h1>
+            <h1 className="titulo text-center pb-4 pt-4 text-anim-right" style={{color:"white"}}>USOS</h1>
             <div className="row text-usos">
               <UsosComponent
                 classContainer="bg-black text-anim-top"
@@ -35,7 +34,6 @@ function Usos() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
