@@ -29,7 +29,7 @@ function Navbar() {
               className="navbar-nav align-items-center ps-5 pe-3 justify-content-end"
               id="navbar-links"
             >
-              <li className="nav-item mt-0 pe-1">
+              <li className="nav-item mt-0 pe-sm-1">
                 <div>
                   <Boton toggleModal={toggleModal} />
                   <ModalNavbar visible={modalVisible} setVisible={setVisible}/>

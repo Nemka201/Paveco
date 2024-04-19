@@ -33,41 +33,48 @@ const ContactoForm = () => {
   );
   const onSubmit = async (data) => {
     const compress = new Compress();
-    compress
-      .compress([data.archivo[0]], {
+    try {
+      const results = await compress.compress([data.archivo[0]], {
         size: 0.5,
         quality: 0.75,
         resize: "jpeg",
-      })
-      .then((results) => {
-        const result = results[0];
-        const imagenBase64 = result.data;
-        axios
-          .post("https://vast-puce-nightingale-wear.cyclic.app/Resend/Send", {
-            from: "admin@resend.dev",
-            to: "portalweb@paveco.com.ar",
-            subject: "PAVECO - PORTAL WEB",
-            html: ReactDOMServer.renderToString(
-              <EmailTemplate
-                nombre={data.nombre}
-                telefono={data.telefono}
-                mensaje={data.mensaje}
-                email={data.email}
-                imagen={imagenBase64}
-              />
-            ),
-            text: "Paveco",
-          })
-          .then((response) => {
-            setShowModal(true);
-          })
-          .catch((error) => {
-            alert("Error al enviar el formulario");
-          });
-      })
-      .catch((error) => {
-        console.error(error);
       });
+
+      if (results && results.length > 0) {
+        const result = results[0];
+        if (result && result.data) {
+          const imagenBase64 = result.data;
+          axios
+            .post("https://vast-puce-nightingale-wear.cyclic.app/Resend/Send", {
+              from: "admin@resend.dev",
+              to: "portalweb@paveco.com.ar",
+              subject: "PAVECO - PORTAL WEB",
+              html: ReactDOMServer.renderToString(
+                <EmailTemplate
+                  nombre={data.nombre}
+                  telefono={data.telefono}
+                  mensaje={data.mensaje}
+                  email={data.email}
+                  imagen={imagenBase64}
+                />
+              ),
+              text: "Paveco",
+            })
+            .then((response) => {
+              setShowModal(true);
+            })
+            .catch((error) => {
+              alert("Error al enviar el formulario");
+            });
+        } else {
+          // Manejar el caso en el que result o result.data sea undefined
+        }
+      } else {
+        // Manejar el caso en el que results sea undefined o vacío
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
   
   return (
