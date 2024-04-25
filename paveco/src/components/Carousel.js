@@ -43,11 +43,6 @@ export default function Carousel(props) {
           className="c-banner"
           onLoad={() => setLoaded(true)}
         />
-        {/* <div className="text-on-image">
-          <h1 className="titulo-paveco">PAVECO</h1>
-          <hr></hr>
-          <h3 className="text-normal">ASFALTO ECOLÓGICO.</h3>
-        </div> */}
       </div>
     </>
   );

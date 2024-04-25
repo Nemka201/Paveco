@@ -6,7 +6,7 @@ function Noticias() {
   return (
     <>
       <Navbar />
-      <div className="banner pt-3" style={{backgroundColor: "#e3f2fd"}}>
+      <div className="banner pt-3">
         <section>
           <NoticiaComponent
             classContainer=""

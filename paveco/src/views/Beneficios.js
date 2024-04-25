@@ -8,7 +8,6 @@ function Beneficios() {
     <>
       <div className="container-fluid bg-gradient" id="beneficios">
         <BeneficiosComponent />
-        <CuadroComparativo />
       </div>
     </>
   );

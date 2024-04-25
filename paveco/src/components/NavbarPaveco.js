@@ -11,20 +11,19 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark">
+      <nav className="navbar navbar-expand-lg bg-blur">
         <div className="container-fluid text-center">
           <div className="col-sm-2 col-md-4 col-lg-6 col-xl-6 text-start navbar-icon">
             <a className="navbar-brand ms-4 pt-0" href="/">
               <img
                 src={logo}
                 alt="Bootstrap"
-                width="145"
-                height="110"
-                className="drop-shadow"
+                width="80"
+                height="55"
               ></img>
             </a>
           </div>
-          <div className="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 text-shadow">
+          <div className="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
             <ul
               className="navbar-nav align-items-center ps-5 pe-3 justify-content-end"
               id="navbar-links"
@@ -35,10 +34,52 @@ function Navbar() {
                   <ModalNavbar visible={modalVisible} setVisible={setVisible}/>
                 </div>
               </li>
+              <li className="nav-item mt-0 pe-1 nav-lg-item">
+                  <a className="nav-link">
+                  <Link smooth to="/">
+                      Inicio
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item mt-0 pe-1 nav-lg-item">
+                  <a className="nav-link">
+                    <Link smooth to="/#beneficios">
+                      Beneficios
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item mt-0 pe- nav-lg-item">
+                  <a className="nav-link">
+                  <Link smooth to="/Productos-y-Servicios">
+                      Productos y Servicios
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item mt-0 pe-1 nav-lg-item">
+                  <a className="nav-link">
+                    <Link smooth to="/#usos">
+                      Usos
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item mt-0 pe-1 nav-lg-item">
+                  <a className="nav-link">
+                    <Link smooth to="/#fichatecnica">
+                      Ficha Técnica
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item mt-0 pe-1 nav-lg-item">
+                  <a className="nav-link">
+                    <Link smooth to="/Noticias">
+                      Noticias
+                    </Link>
+                  </a>
+                </li>
               <li className="nav-item pe-1 mt-0 mb-2">
-                <Link smooth to="/Contacto" className="nav-link mt-2">
+                {/* <Link smooth to="/Contacto" className="nav-link mt-2">
                   <button className="btn btn-contacto">CONTACTO</button>
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </div>

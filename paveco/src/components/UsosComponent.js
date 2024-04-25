@@ -9,7 +9,7 @@ function UsosComponent(props) {
           <div className="text-center pb-4">
             <i
               class="fa-solid fa-circle-down text-center pt-0 pb-4 usos-t"
-              style={{ fontSize: "55px" }}
+              style={{ fontSize: "2em" }}
             ></i>
           </div>
           <h2 className="text-center usos-t">{props.text}</h2>
