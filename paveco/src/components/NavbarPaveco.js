@@ -11,7 +11,7 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-blur">
+      <nav className="navbar navbar-expand-lg bg-blur sticky-top">
         <div className="container-fluid text-center">
           <div className="col-sm-2 col-md-4 col-lg-6 col-xl-6 text-start navbar-icon">
             <a className="navbar-brand ms-4 pt-0" href="/">

@@ -8,6 +8,10 @@ import Usos from "../views/Usos";
 import FichaTecnica from "../views/FichaTecnica";
 import React, { useRef, useState } from "react";
 import FirstView from "./FirstView";
+import SecondView from "./SecondView";
+import ThirdView from "./ThirdView";
+import LastView from "./LastView";
+
 
 function Home() {
   const viewsRef = useRef([]);
@@ -27,21 +31,21 @@ function Home() {
 
   return (
     <div className="home">
-      <div className="view" ref={(el) => (viewsRef.current[0] = el)} tabIndex={-1}
-      >
+      <Navbar />
+      <div className="view" ref={(el) => (viewsRef.current[0] = el)} tabIndex={-1}>
         <FirstView />
       </div>{" "}
-      {/* <button onClick={irArriba} id="upButton" title="Ir arriba">
+      <button onClick={irArriba} id="upButton" title="Ir arriba">
         <i class="fa-solid fa-arrow-up"></i>
-      </button> */}
+      </button>
       <div className="view" ref={(el) => (viewsRef.current[1] = el)} tabIndex={-1}>
-        <FirstView />
+        <SecondView />
       </div>{" "}
       <div className="view" ref={(el) => (viewsRef.current[2] = el)} tabIndex={-1}>
-        <FirstView />
+        <ThirdView />
       </div>{" "}
       <div className="view" ref={(el) => (viewsRef.current[3] = el)} tabIndex={-1}>
-        <FirstView />
+        <LastView />
       </div>{" "}
       <div className="view" ref={(el) => (viewsRef.current[4] = el)} tabIndex={-1}>
         <FirstView />

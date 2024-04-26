@@ -3,8 +3,8 @@ import UsosComponent from "../components/UsosComponent";
 function Usos() {
   return (
     <>
-      <div className="container bg-black p-4" id="usos">
-        <div className="row bg-black p-4 pt-0">
+      <div className="container p-4 pt-0" id="usos">
+        <div className="row p-4 pt-0">
           <div className="col-12">
             <h1 className="titulo text-center pb-4 pt-4 text-anim-right" style={{color:"white"}}>USOS</h1>
             <div className="row text-usos">
