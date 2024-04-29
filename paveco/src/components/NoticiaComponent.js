@@ -8,7 +8,7 @@ function NoticiaComponent(props) {
         <div className="row p-3 pt-0">
           <div className={classCard}>
             <h2 className="text-center text-black">{props.titulo}</h2>
-            <div className="description text-oswald">
+            <div className="description pt-serif-regular">
               <p>{props.descripcion1}</p>
               <p>{props.descripcion2}</p>
               <p>{props.descripcion3}</p>
@@ -23,7 +23,7 @@ function NoticiaComponent(props) {
                 />
               </a>
             </div>
-            <h5 className="text-end">{props.fecha}</h5>
+            <h5 className="text-end roboto-thin-italic">{props.fecha}</h5>
           </div>
         </div>
       </div>

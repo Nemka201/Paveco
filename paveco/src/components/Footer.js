@@ -3,7 +3,7 @@ function Footer() {
     <>
       <div className="container-fluid bg-black pe-5">
         <div className="row text-white">
-          <div className="col-7 col-md-6 col-lg-4 text-white text-normal align-self-center">
+          <div className="col-7 col-md-6 col-lg-4 text-white roboto-light-italic align-self-center">
             <p className="ps-3 pt-3 footer-text">PAVECO ® - ASFALTO ECOLÓGICO</p>
           </div>
           <div className="col-5 col-md-6 col-lg-8 text-end">

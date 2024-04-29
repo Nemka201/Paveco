@@ -1,17 +1,10 @@
-import Banner from "../components/Banner";
 import Navbar from "../components/NavbarPaveco";
-import AlianzaEstrategica from "../components/AlianzaEstrategica";
-import Footer from "../components/Footer";
-import Presentacion from "../components/Presentacion";
-import Beneficios from "../views/Beneficios";
-import Usos from "../views/Usos";
-import FichaTecnica from "../views/FichaTecnica";
+import { HashLink as Link } from "react-router-hash-link";
 import React, { useRef, useState } from "react";
 import FirstView from "./FirstView";
 import SecondView from "./SecondView";
 import ThirdView from "./ThirdView";
 import LastView from "./LastView";
-
 
 function Home() {
   const viewsRef = useRef([]);
@@ -31,72 +24,58 @@ function Home() {
 
   return (
     <div className="home">
+      <div className="left-line"></div>
+      <div className="right-line"></div>
       <Navbar />
-      <div className="view" ref={(el) => (viewsRef.current[0] = el)} tabIndex={-1}>
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[0] = el)}
+        tabIndex={-1}
+      >
         <FirstView />
       </div>{" "}
-      <button onClick={irArriba} id="upButton" title="Ir arriba">
-        <i class="fa-solid fa-arrow-up"></i>
-      </button>
-      <div className="view" ref={(el) => (viewsRef.current[1] = el)} tabIndex={-1}>
+      <Link smooth to="/#home">
+        <button id="upButton" title="Ir arriba">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </Link>
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[1] = el)}
+        tabIndex={-1}
+      >
         <SecondView />
       </div>{" "}
-      <div className="view" ref={(el) => (viewsRef.current[2] = el)} tabIndex={-1}>
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[2] = el)}
+        tabIndex={-1}
+      >
         <ThirdView />
       </div>{" "}
-      <div className="view" ref={(el) => (viewsRef.current[3] = el)} tabIndex={-1}>
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[3] = el)}
+        tabIndex={-1}
+      >
         <LastView />
       </div>{" "}
-      <div className="view" ref={(el) => (viewsRef.current[4] = el)} tabIndex={-1}>
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[4] = el)}
+        tabIndex={-1}
+      >
         <FirstView />
       </div>{" "}
-      <div className="view" ref={(el) => (viewsRef.current[5] = el)} tabIndex={-1}>
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[5] = el)}
+        tabIndex={-1}
+      >
         <FirstView />
       </div>{" "}
     </div>
-    //     <div
-    //     className="view"
-    //     ref={(el) => (viewsRef.current[1] = el)}
-    //     tabIndex={-1}
-    //   ></div>{" "}
-    //   <Navbar />
-    //   <Presentacion />
-    //   <div
-    //     className="view"
-    //     ref={(el) => (viewsRef.current[2] = el)}
-    //     tabIndex={-1}
-    //   ></div>{" "}
-    //   <Navbar />
-    //   <AlianzaEstrategica />
-    //   <div
-    //     className="view"
-    //     ref={(el) => (viewsRef.current[3] = el)}
-    //     tabIndex={-1}
-    //   ></div>{" "}
-    //   <Navbar />
-    //   <Beneficios />
-    //   <div
-    //     className="view"
-    //     ref={(el) => (viewsRef.current[4] = el)}
-    //     tabIndex={-1}
-    //   ></div>{" "}
-    //   <Navbar />
-    //   <Usos />
-    //   <div
-    //     className="view"
-    //     ref={(el) => (viewsRef.current[5] = el)}
-    //     tabIndex={-1}
-    //   ></div>{" "}
-    //   <Navbar />
-    //   <FichaTecnica />
-    //   <Footer />
-    // </div>
   );
-
-  function irArriba() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
 }
 
 export default Home;

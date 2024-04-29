@@ -1,4 +1,3 @@
-import BeneficiosCard from "./BeneficiosCard";
 import CarouselBeneficios from "./CarouselBeneficios";
 
 function BeneficiosComponent() {
@@ -6,9 +5,9 @@ function BeneficiosComponent() {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 p-0 p-lg-3">
-            <h1 className="titulo text-center">
-              BENEFICIOS Y VENTAJAS
+          <div className="col-12 p-0 p-lg-3 mt-5">
+            <h1 className="titulo text-center text-white mt-4">
+              BENEFICIOS
               </h1>
               <div className="row">
                 <div className="col-4 col-md-1"></div>

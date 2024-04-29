@@ -3,7 +3,7 @@ import Presentacion from "../components/Presentacion";
 
 function SecondView() {
   return (
-    <div className="container-fluid bg-black text-black">
+    <div className="container-fluid bg-black text-black" style={{height: "100vh"}}>
       <Presentacion />
     </div>
   );

@@ -76,16 +76,17 @@ const ContactoForm = () => {
       console.error(error);
     }
   };
-  
+
   return (
     <div className="container-fluid form-consulta">
       <Modal show={showModal} onHide={handleCloseModal} backdrop="static">
         <Modal.Header closeButton>
-          <Modal.Title className="text-center">Se envió correctamente el formulario</Modal.Title>
+          <Modal.Title className="text-center">
+            Se envió correctamente el formulario
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body className="text-center">Estas volviendo a Home</Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
+        <Modal.Footer></Modal.Footer>
       </Modal>
       <h1 className="text-center text-anim-left">Envianos tu consulta</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
@@ -93,6 +94,7 @@ const ContactoForm = () => {
         <Form.Group className="mb-3">
           <Form.Label className="text-anim-right">Nombre Completo</Form.Label>
           <Form.Control
+            className="roboto-regular"
             type="text"
             placeholder="Ingresa tu nombre"
             {...register("nombre", {
@@ -113,6 +115,7 @@ const ContactoForm = () => {
         <Form.Group className="mb-3">
           <Form.Label className="text-anim-right">Teléfono</Form.Label>
           <Form.Control
+            className="roboto-regular"
             type="tel"
             placeholder="Ingresa tu número de teléfono"
             {...register("telefono", {
@@ -134,6 +137,7 @@ const ContactoForm = () => {
         <Form.Group className="mb-3">
           <Form.Label className="text-anim-right">Email</Form.Label>
           <Form.Control
+            className="roboto-regular"
             type="email"
             placeholder="Ingresa tu email"
             {...register("email", {
@@ -154,6 +158,7 @@ const ContactoForm = () => {
         <Form.Group className="mb-3">
           <Form.Label className="text-anim-right">Mensaje</Form.Label>
           <Form.Control
+            className="roboto-regular"
             as="textarea"
             rows={10}
             placeholder="Ingresa tu mensaje"
@@ -172,9 +177,10 @@ const ContactoForm = () => {
           )}
           <Form.Group />
           {/* Campo Archivo  */}
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3 mt-2">
             <Form.Label className="text-anim-right">Archivo</Form.Label>
             <Form.Control
+              className="roboto-regular"
               type="file"
               {...register("archivo", {
                 validate: {
@@ -182,10 +188,7 @@ const ContactoForm = () => {
                     // Si no se sube ningún archivo, retornamos true
                     if (!value[0]) return true;
                     const extension = value[0].name.split(".").pop();
-                    const validExtensions = [
-                      "jpg",
-                      "png"
-                    ];
+                    const validExtensions = ["jpg", "png"];
                     if (!validExtensions.includes(extension)) {
                       return "El archivo debe ser PDF, JPG, PNG o Word";
                     }
