@@ -23,12 +23,12 @@ function Navbar() {
               ></img>
             </a>
           </div>
-          <div className="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+          <div className="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 ">
             <ul
               className="navbar-nav align-items-center roboto-regular ps-5 pe-3 justify-content-end"
               id="navbar-links"
             >
-              <li className="nav-item mt-0 pe-sm-1">
+              <li className="nav-item mt-0 pe-sm-1 ">
                 <div>
                   <Boton toggleModal={toggleModal} />
                   <ModalNavbar visible={modalVisible} setVisible={setVisible}/>
@@ -44,14 +44,14 @@ function Navbar() {
                 <li className="nav-item mt-0 pe-1 nav-lg-item">
                   <a className="nav-link">
                     <Link smooth to="/#beneficios">
-                      Beneficios
+                      Nosotros
                     </Link>
                   </a>
                 </li>
                 <li className="nav-item mt-0 pe- nav-lg-item">
                   <a className="nav-link">
                   <Link smooth to="/Productos-y-Servicios">
-                      Productos y Servicios
+                      Beneficios
                     </Link>
                   </a>
                 </li>

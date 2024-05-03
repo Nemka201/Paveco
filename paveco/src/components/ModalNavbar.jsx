@@ -7,58 +7,58 @@ function ModalNavbar(props) {
   };
   return (
     <>
-      <div className="modal" style={{ display: visible ? "flex" : "none" }}>
-        <div className="container-fluid text-shadow">
+      <div className="modal sticky-bottom" style={{ display: visible ? "flex" : "none", justifyContent:"center"}}>
+        <div className="container-fluid">
           <div className="row p-5">
-            <div className="col-12 justify-content-end">
-              <ul className="navbar-nav d-inline-block text-center">
-                <li className="nav-item mt-0 pe-1">
-                  <a className="nav-link">
+            <div className="col-12">
+              <ul className="navbar-nav">
+                <li className="nav-item mt-0 pe-4">
+                  <a className="nav-link pe-5">
                   <Link smooth to="/" onClick={closeModal}>
                       Home
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-1">
-                  <a className="nav-link" onClick={closeModal}>
+                <li className="nav-item mt-0 pe-4">
+                  <a className="nav-link pe-5" onClick={closeModal}>
                     <Link smooth to="/#beneficios">
                       Beneficios
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-1">
-                  <a className="nav-link">
+                <li className="nav-item mt-0 pe-4">
+                  <a className="nav-link pe-5">
                   <Link smooth to="/Productos-y-Servicios">
                       Productos y Servicios
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-1">
-                  <a className="nav-link" onClick={closeModal}>
+                <li className="nav-item mt-0 pe-4">
+                  <a className="nav-link pe-5" onClick={closeModal}>
                     <Link smooth to="/#usos">
                       Usos
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-1">
-                  <a className="nav-link">
+                <li className="nav-item mt-0 pe-4">
+                  <a className="nav-link pe-5">
                     <Link smooth to="/#fichatecnica" onClick={closeModal}>
                       Ficha Técnica
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-1">
-                  <a className="nav-link">
+                <li className="nav-item mt-0 pe-4">
+                  <a className="nav-link pe-5">
                     <Link smooth to="/Noticias" onClick={closeModal}>
                       Noticias
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-1">
+                <li className="nav-item mt-0 pe-4">
                   <div>
                     <i
                       onClick={closeModal}
-                      className="btn-x nav-link"
+                      className="btn-x nav-link pe-5"
                     >
                       <i class="fa-solid fa-x"></i>
                     </i>{" "}

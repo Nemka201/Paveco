@@ -28,7 +28,7 @@ export default function CarouselBeneficios(props) {
           <BeneficiosCard b="Producto modificado con bio-polímeros." />
         </div>
         <div>
-          <BeneficiosCard b="Se puede fabricar el asfalto frio EcoPAV en cualquier lugar cercano a la obra." />
+          <BeneficiosCard b="Se puede fabricar el asfalto frio Paveco en cualquier lugar cercano a la obra." />
         </div>
         <div>
           <BeneficiosCard b="Solución permanente adhiriendo al asfalto y concreto." />
