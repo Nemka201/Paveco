@@ -2,10 +2,12 @@ import tabla1 from "../assets/img/especificaciones-1.png";
 import tabla2 from "../assets/img/especificaciones-2.png";
 import tabla1Mobile from "../assets/img/especificaciones-1-mobile.png";
 import tabla2Mobile from "../assets/img/especificaciones-2-mobile.png";
+import Navbar from "../components/NavbarPaveco";
 
 function FichaTecnicaComponent() {
   return (
     <>
+    <Navbar/>
       <div
         className="container-fluid text-center pe-4 ps-4 pt-0 mt-0"
         id="fichatecnica"

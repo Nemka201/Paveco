@@ -18,8 +18,8 @@ function Navbar() {
               <img
                 src={logo}
                 alt="Bootstrap"
-                width="80"
-                height="55"
+                width="75"
+                height="54"
               ></img>
             </a>
           </div>
@@ -43,14 +43,14 @@ function Navbar() {
                 </li>
                 <li className="nav-item mt-0 pe-1 nav-lg-item">
                   <a className="nav-link">
-                    <Link smooth to="/#beneficios">
+                    <Link smooth to="/#nosotros">
                       Nosotros
                     </Link>
                   </a>
                 </li>
                 <li className="nav-item mt-0 pe- nav-lg-item">
                   <a className="nav-link">
-                  <Link smooth to="/Productos-y-Servicios">
+                  <Link to="/#beneficios">
                       Beneficios
                     </Link>
                   </a>
@@ -64,7 +64,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item mt-0 pe-1 nav-lg-item">
                   <a className="nav-link">
-                    <Link smooth to="/#fichatecnica">
+                    <Link smooth to="/Ficha-tecnica">
                       Ficha Técnica
                     </Link>
                   </a>

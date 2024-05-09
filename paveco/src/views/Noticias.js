@@ -1,12 +1,16 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/NavbarPaveco";
 import NoticiaComponent from "../components/NoticiaComponent";
+import { motion } from 'framer-motion'
+import motionVariants from "../motionVariants";
 
 function Noticias() {
   return (
     <>
       <Navbar />
-      <div className="background-noticias pt-3">
+      <motion.div
+        className="background-noticias pt-3"
+      >
         <section>
           <NoticiaComponent
             classContainer=""
@@ -31,7 +35,7 @@ function Noticias() {
             link="https://www.innovaspain.com/asfalto-frio-calentamiento-global/"
           />
         </section>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );

@@ -1,12 +1,13 @@
 import FichaTecnicaComponent from "../components/FichaTecnicaComponent";
-import Footer from "../components/Footer";
-import Navbar from "../components/NavbarPaveco";
-
+import { motion } from "framer-motion";
+import motionVariants from "../motionVariants";
 
 function FichaTecnica() {
   return (
     <>
-      <FichaTecnicaComponent/>
+      <motion.div>
+        <FichaTecnicaComponent />
+      </motion.div>
     </>
   );
 }

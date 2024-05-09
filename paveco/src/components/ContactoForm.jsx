@@ -204,7 +204,7 @@ const ContactoForm = () => {
             )}
           </Form.Group>
         </Form.Group>
-        <button className="btn btn-contacto btn-enviar mt-3" type="submit">
+        <button className="btn btn-contacto-send btn-enviar mt-3" type="submit">
           Enviar
         </button>
       </Form>

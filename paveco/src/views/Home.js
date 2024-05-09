@@ -5,6 +5,7 @@ import FirstView from "./FirstView";
 import SecondView from "./SecondView";
 import ThirdView from "./ThirdView";
 import LastView from "./LastView";
+import { motion } from "framer-motion";
 
 function Home() {
   const viewsRef = useRef([]);
@@ -23,7 +24,7 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <motion.div className="home">
       <div className="left-line"></div>
       <div className="right-line"></div>
       <Navbar />
@@ -38,6 +39,9 @@ function Home() {
         <button id="upButton" title="Ir arriba">
           <i class="fa-solid fa-arrow-up"></i>
         </button>
+        <a href="https://wa.me/message/PWL5RB5BZEEKJ1" className="wsp" title="Enviar un WhatsApp!">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
       </Link>
       <div
         className="view"
@@ -74,7 +78,7 @@ function Home() {
       >
         <FirstView />
       </div>{" "}
-    </div>
+    </motion.div>
   );
 }
 

@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;500;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Londrina+Solid:wght@100;300;400;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Londrina+Solid:wght@100;300;400;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
 :root {
   --color-principal: #00ff22;
   --color-hover: #00ff22;
@@ -22,59 +25,25 @@
   --fuente-Black: "Archivo Black", sans-serif;
   --fuente-roboto: "Roboto", sans-serif;
 }
-
-/* .fade-in-top {
-  animation-name: fade-in-top;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-} */
-.fade-in-slow {
-  opacity: 0;
-  transform: translateY(200px);
-  visibility: hidden;
-  animation-name: fadeInSlow;
-  animation-duration: 2s;
-  animation-fill-mode:forwards; 
-  animation-timing-function: ease-in-out;
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif!important;
+  font-weight: 400;
+  font-style: normal;
 }
-
-@keyframes fadeInSlow {
-  0% {
-    opacity: 0;
-    transform: translateY(200px);
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
+.bolsa{
+  background-image: url(./assets/bolsa.png);
+  position: absolute;
+  background-size: cover;
+  width: 360px;
+  height: 450px;
+  left: 5vw;
+  top: 60vh;
+  filter: drop-shadow(-2px 4px 8px hsla(150, 100%, 2%, 0.719));
 }
-.fade-in-top {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
-.fade-in-top.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fade-in-top {
-    
-  0% {
-    transform:translateY(-50px);
-    opacity:0;
-  }
-  100% {
-    transform:translateY(0);
-    opacity:1;
-  }
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif!important;
+  font-weight: 400;
+  font-style: normal;
 }
 .roboto-thin {
   font-family: "Roboto", sans-serif;
@@ -195,34 +164,6 @@ p {
   text-indent: 0cm;
 }
 
-table,
-td,
-th {
-  border: 3px solid white;
-  cursor: pointer;
-  height: 80px;
-  text-align: center;
-}
-
-tr {
-  height: 80px;
-  text-align: center;
-}
-table {
-  background-attachment: fixed;
-  /* background-image: url(./assets/img/bg-ficha.jpg); */
-  background-color: var(--color-verde-oscuro);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: var(--color-white);
-  font-size: 1em;
-  text-shadow: 3px 3px 1px black;
-}
-
-td {
-  text-align: center;
-}
 .modal{
   font-family: var(--fuente-roboto) ;
   text-transform: uppercase;
@@ -294,11 +235,30 @@ a {
 #upButton{
   position: fixed;
   border-radius: 5px;
-  bottom: 1.5%;
+  bottom: 5vh;
   z-index: 100;
-  left:97vw;
+  background-color: rgba(29, 29, 29, 0.4);
+  width: 33px;
+  border: none;
+  color: var(--color-principal);
   box-shadow: 0px 0px 4px --color-verde-claro();
+  transition: all 0.5 ease-in;
 }
+#upButton:hover{
+  transition: all 0.5 ease-out;
+  border: 1px solid var(--color-verde-brillante);
+}
+.wsp{
+  position: fixed;
+  bottom: 5vh;
+  z-index: 100;
+  left: 0.2vw;
+  box-shadow: 0px 0px 4px --color-verde-claro();
+  transition: all 0.5 ease-in;
+  font-size: 2.2em;
+  color:#f3f5f7;
+}
+
 .bg-presentacion {
   background-attachment: fixed;
   background-image: url(./assets/backgrounds/fondo-presentacion.jpg);
@@ -320,20 +280,12 @@ a {
   filter: brightness(100%);
   /* border-radius: 0 0 20px 20px; */
 }
-
-#border-verde {
-  border: 1px solid var(--color-hover) !important;
-  border-bottom: 0 !important;
-}
 .text-white-p {
   color: var(--color-white) !important;
   text-shadow: 2px 2px 2px var(--color-chocolate);
 }
 .bg-white-p {
   background-color: var(--color-white) !important;
-}
-#border-verde-presentacion {
-  border: 1px solid var(--color-hover) !important;
 }
 
 .producto-imagen {
@@ -361,16 +313,6 @@ a {
 }
 
 .fa-brands {
-  transition: all 0.5s ease;
-}
-
-.drop-shadow {
-  filter: drop-shadow(5px 5px 3px black);
-  transition: all 0.5s ease;
-}
-
-.drop-shadow:hover {
-  filter: drop-shadow(6px 6px 10px var(--color-hover));
   transition: all 0.5s ease;
 }
 
@@ -407,23 +349,6 @@ a {
 
 .text-black {
   font-family: var(--fuente-Black);
-}
-
-.t-black {
-  bottom: 3px;
-  height: 0;
-  position: relative;
-  transform: rotate(180deg);
-  width: 0;
-  z-index: 1;
-}
-
-.t-black-i {
-  bottom: 87px;
-  height: 0;
-  position: relative;
-  width: 0;
-  z-index: 1;
 }
 
 .ficha-tecnica {
@@ -506,23 +431,6 @@ a {
   text-shadow: 2px 2px 1px black;
 }
 
-.animation-p {
-  animation: escribir 0s 1;
-}
-
-.navbar-gradient {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 40%,
-    rgba(47, 255, 0, 1) 100%
-  );
-}
-
-.i-tabla {
-  width: 80%;
-}
-
 .c-banner {
   filter: brightness(60%);
   height: calc(100vh - 85px);
@@ -532,16 +440,6 @@ a {
   padding-top: 0;
   position: relative;
   width: 100%;
-}
-
-.alianza-img {
-  border: 1px solid var(--color-secundario);
-  border-radius: 100%;
-  box-shadow: 1px 1px -1px var(--color-secundario);
-  height: 500px;
-  margin-left: 5em;
-  margin-top: 2em;
-  width: 500px;
 }
 
 .noticia-card {
@@ -636,13 +534,13 @@ position: relative;
 .background-image {
   position: absolute;
   animation: cambioFondo 20s infinite;
-  transition:ease-out;
+  transition:linear;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url(./assets/carousel/1.jpg);
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -658,15 +556,14 @@ position: relative;
 }
 .b-card {
   border: 1px solid rgb(179, 179, 179);
-  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
-  border-radius: 45px;
+  box-shadow: 4.0px 8.0px 8.0px hsla(0, 0%, 35%, 0.38);
+  border-radius: 1.25em;
   cursor: pointer;
-  width: 35em;
   padding: 1.2em;
-  position: relative;
   transition: all 0.5s ease;
   align-items: center;
-  color:black!important;
+  color:white!important;
+  background-color: black;
 }
 
 .usos-c {
@@ -724,6 +621,7 @@ b-icon {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior:smooth!important;
 }
 .text-on-image {
   color: var(--color-white);
@@ -867,9 +765,18 @@ b-icon {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.548);
   border: 1px solid var(--color-verde-claro);
 }
-
+.btn-contacto-send {
+  background-color: rgba(0, 0, 0, 0.521)!important;
+  border-radius: 8px!important;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 25px 8px 25px;
+  transition: all 0.5s ease;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.548);
+  border: 1px solid var(--color-verde-claro);
+}
 .btn-enviar {
-  background-color: var(--color-secundario);
   border-radius: 7px;
   color: var(--color-white);
   font-size: 18px;
@@ -887,7 +794,14 @@ b-icon {
   border: 1px solid var(--color-hover);
   color: #00ff22;
 }
-
+.btn-contacto-send:hover {
+  box-shadow: 0px 0px 10px var(--color-secundario);
+  transition: all 0.5s ease-out;
+  text-shadow: none!important;
+  border-radius: 10px;
+  border: 1px solid var(--color-hover);
+  color: #00ff22;
+}
 .nav-link {
   color: var(--color-white);
   transition: all 0.5s ease;
@@ -1136,7 +1050,8 @@ b-icon {
   }
 
   #upButton{
-    left:96vw;
+    left:97.46vw;
+    height: 100px;
   }
   .b-carousel{
     display: block;
@@ -1310,11 +1225,10 @@ b-icon {
   }
 
   .b-card {
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 
   .producto-imagen {
     width: 27vw;
   }
-
 }
