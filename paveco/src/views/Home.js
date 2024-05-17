@@ -6,6 +6,7 @@ import SecondView from "./SecondView";
 import ThirdView from "./ThirdView";
 import LastView from "./LastView";
 import { motion } from "framer-motion";
+import Usos from "./Usos";
 
 function Home() {
   const viewsRef = useRef([]);
@@ -37,12 +38,30 @@ function Home() {
       </div>{" "}
       <Link smooth to="/#home">
         <button id="upButton" title="Ir arriba">
-          <i class="fa-solid fa-arrow-up"></i>
+          <i className="fa-solid fa-arrow-up"></i>
         </button>
-        <a href="https://wa.me/message/PWL5RB5BZEEKJ1" className="wsp" title="Enviar un WhatsApp!">
+      </Link>
+      <a
+          href="https://www.facebook.com/profile.php?id=61552672778681&mibextid=kFxxJD"
+          className="facebook"
+          title="Visitanos en Facebook!"
+        >
+          <i className="fa-brands fa-facebook pe-1 pe-md-3"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/paveco.asfalto?utm_source=qr&igsh=emh3MDRxMWJ0dGg1"
+          className="instagram"
+          title="Visitanos en Instagram!"
+        >
+          <i className="fa-brands fa-instagram pe-1 pe-md-3"></i>
+        </a>
+        <a
+          href="https://wa.me/message/PWL5RB5BZEEKJ1"
+          className="wsp"
+          title="Enviar un WhatsApp!"
+        >
           <i class="fa-brands fa-whatsapp"></i>
         </a>
-      </Link>
       <div
         className="view"
         ref={(el) => (viewsRef.current[1] = el)}
@@ -52,6 +71,7 @@ function Home() {
       </div>{" "}
       <div
         className="view"
+        id="b-view"
         ref={(el) => (viewsRef.current[2] = el)}
         tabIndex={-1}
       >
@@ -63,20 +83,6 @@ function Home() {
         tabIndex={-1}
       >
         <LastView />
-      </div>{" "}
-      <div
-        className="view"
-        ref={(el) => (viewsRef.current[4] = el)}
-        tabIndex={-1}
-      >
-        <FirstView />
-      </div>{" "}
-      <div
-        className="view"
-        ref={(el) => (viewsRef.current[5] = el)}
-        tabIndex={-1}
-      >
-        <FirstView />
       </div>{" "}
     </motion.div>
   );

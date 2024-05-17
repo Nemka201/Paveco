@@ -10,22 +10,22 @@ function BeneficiosComponent() {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 p-0 p-lg-3 mt-5">
+          <div className="col-12 p-4 p-lg-4 mt-5 b-view">
             <motion.h1
               className="titulo text-center text-white mt-4 m-plus-rounded-1c-regular pb-5"
               initial="hidden"
               whileInView="visible"
               variants={variants}
-              transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
+              transition={{ duration: 0.4, delay: 0.2, ease: "linear" }}
             >
-              BENEFICIOS
+              SUS <span className="green-text">BENIFICIOS</span>
             </motion.h1>
             <motion.div
-              className="row ps-4 pe-4"
+              className="row ps-3 pe-3 ps-md-5 pe-md-5"
               initial="hidden"
               whileInView="visible"
               variants={variants}
-              transition={{ duration: 0.5, delay: 0.8, ease: "linear" }}
+              transition={{ duration: 0.4, delay: 0.5, ease: "linear" }}
             >
               <BeneficiosCard
                 b="No contamina, no emite gases no daña la salud de los trabajadores."
