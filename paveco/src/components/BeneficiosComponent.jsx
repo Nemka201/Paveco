@@ -1,5 +1,7 @@
 import BeneficiosCard from "./BeneficiosCard";
 import { motion } from "framer-motion";
+import firstImage from "./../assets/beneficios/1.jpg";
+import CarouselBeneficiosMobile from "./CarouselBeneficiosMobile";
 
 function BeneficiosComponent() {
   const variants = {
@@ -8,19 +10,20 @@ function BeneficiosComponent() {
   };
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid bg-white-s">
         <div className="row">
-          <div className="col-12 p-4 p-lg-4 mt-5 b-view">
+          <div className="col-12 p-3 p-lg-3 mt-3 mt-lg-5 b-view">
             <motion.h1
-              className="titulo text-center text-white mt-4 m-plus-rounded-1c-regular pb-5"
+              className="titulo text-center text-black mt-4 m-plus-rounded-1c-regular pb-4 pt-3"
               initial="hidden"
               whileInView="visible"
               variants={variants}
               transition={{ duration: 0.4, delay: 0.2, ease: "linear" }}
             >
-              SUS <span className="green-text">BENIFICIOS</span>
+              <span>BENEFICIOS</span>
             </motion.h1>
-            <motion.div
+            <CarouselBeneficiosMobile />
+            <div
               className="row ps-3 pe-3 ps-md-5 pe-md-5"
               initial="hidden"
               whileInView="visible"
@@ -28,27 +31,50 @@ function BeneficiosComponent() {
               transition={{ duration: 0.4, delay: 0.5, ease: "linear" }}
             >
               <BeneficiosCard
-                b="No contamina, no emite gases no daña la salud de los trabajadores."
-                b2="Producto modificado con bio-polímeros."
+                beneficio="Una vez colocado el producto se puede reanudar el tráfico inmediamente."
+                beneficio2="Solución permanente uniendo aslfato y concreto por sus cualidades se adhiere perfectamente
+                al hormigon."
+                beneficio3="Compactación por presión del tráfico o maquinas compactadoras."
+                beneficio4="Se puede aplicar en forma directa en la superficie o reparo (no precisa riego de imprimación
+                  ni riego de liga) y poseé propiedades anti-deslizantes."
+                imagen="trf.png"
+                imagen2="adh.png"
+                imagen3="cmp.png"
+                imagen4="apl.png"
+                cardBack={firstImage}
+                className="rotateY not-mobile"
+                animation="leftIn"
               />
               <BeneficiosCard
-                b="Aplicable en cualquier clima: todas las estaciones."
-                b2="Solución permanente adhiriendo al asfalto y concreto."
+                beneficio="La formulación de PAVECO es un asfalto de ultima generación (SUPERPAVE) fabricado en
+                USA."
+                beneficio2="No contamina, no emite gases y no compromete la salud de los trabajadores."
+                beneficio3="Al ser su composición 95% petróleo y no contener agua, la película que crea es ampliamente
+  menos permeable al agua que otros asfaltos."
+                beneficio4="Asfalto modificado con polimeros y agregado de Bio-polímeros."
+                imagen="1.png"
+                imagen2="eco.png"
+                imagen3="imp.png"
+                imagen4="bio.png"
+                cardBack={firstImage}
+                className="midCard not-mobile"
+                animation="bottomIn"
               />
               <BeneficiosCard
-                b="Se puede fabricar el asfalto frio Paveco en cualquier lugar cercano a la obra."
-                b2="Una vez colocado el producto se puede reanudar el tráfico inmediatamente."
+                beneficio="Aplicable en cualquier clima, todas las estaciones del año. Soporta temperaturas
+                -50° /+80° grados."
+                beneficio2="Ahorros significativos en construcción de vías."
+                beneficio3="Periodo de almacenamiento de hasta 2 años sin perder sus propiedades."
+                beneficio4="Se puede fabricar cualquier cantidad optimizando el espacio de almacenaje logístico."
+                imagen="tmp.png"
+                imagen2="cst.png"
+                imagen3="cld.png"
+                imagen4="prd.png"
+                cardBack={firstImage}
+                className="rotateYPositive not-mobile"
+                animation="rightIn"
               />
-              <BeneficiosCard
-                b="Compactación por presión de tráfico o compactadoras."
-                b2="Se puede aplicar en forma directa en la superficie a reparar (no precisa riego de imprimación o riego de liga)"
-              />
-              <BeneficiosCard
-                b="Se puede fabricar cualquier cantidad, optimizando el espacio de almacenajes y logística."
-                b2="Facilidad de almacenamiento de hasta 2 años, sin perder propiedades."
-              />
-              <BeneficiosCard b="Ahorros significativos por el costo de reparar vías." />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
