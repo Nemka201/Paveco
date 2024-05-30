@@ -5,25 +5,28 @@ function BeneficiosCard(props) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [lastEnter, setLastEnter] = useState(0);
 
-  const handleMouseEnter = () => {
-    const now = Date.now();
-    const timeSinceEnter = now - lastEnter;
-    if (timeSinceEnter > 1000) {
-      setIsFlipped(true);
-      setLastEnter(now); 
-    }
-  };
+  // const handleMouseEnter = () => {
+  //   const now = Date.now();
+  //   const timeSinceEnter = now - lastEnter;
+  //   if (timeSinceEnter > 1000) {
+  //     setIsFlipped(true);
+  //     setLastEnter(now); 
+  //   }
+  // };
 
-  const handleMouseLeave = () => {
-    const now = Date.now();
-    const timeSinceEnter = now - lastEnter;
-    if (timeSinceEnter > 1000) { 
-      setIsFlipped(false);
-    } else {
-      setTimeout(() => {
-        setIsFlipped(false);
-      }, 2500 - timeSinceEnter); 
-    }
+  // const handleMouseLeave = () => {
+  //   const now = Date.now();
+  //   const timeSinceEnter = now - lastEnter;
+  //   if (timeSinceEnter > 1000) { 
+  //     setIsFlipped(false);
+  //   } else {
+  //     setTimeout(() => {
+  //       setIsFlipped(false);
+  //     }, 2500 - timeSinceEnter); 
+  //   }
+  // };
+  const handleClick = () => {
+    setIsFlipped(prevState => !prevState);
   };
   const backCardStyle = {
     backgroundSize: "cover",
@@ -65,8 +68,9 @@ function BeneficiosCard(props) {
         className={`b-card ${props.className} mb-2 ${
           isFlipped ? "flipped" : ""
         }`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        // onMouseEnter={handleMouseEnter}
+        // onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
       >
         <div className="card-front">
           <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s" style={heightText}>
