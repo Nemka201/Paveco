@@ -6,9 +6,9 @@ function Presentacion() {
   };
   return (
     <>
-      <div className="container bg-black mt-0 pt-5 presentacion" id="nosotros">
+      <div className="container bg-black mt-0 pt-lg-5 pt-4 presentacion" id="nosotros">
         <div className="col-12">
-          <div className="row m-0 pt-5 pe-lg-4 pe-2">
+          <div className="row m-0 pt-lg-5 pt-3 pe-lg-4 pe-0 mt-3 mt-md-0">
             <div className="col-sm-12 object-fit-cover mt-3 text-white ps-3 pe-3 ps-md-0 pe-md-0">
               <motion.section
                 initial="hidden"

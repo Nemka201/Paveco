@@ -12,9 +12,9 @@ function BeneficiosComponent() {
     <>
       <div className="container-fluid p-lg-5 pt-0 pt-lg-0 bg-white-s">
         <div className="row">
-          <div className="col-12 p-4 p-lg-3 mt-3 mt-lg-5 b-view">
+          <div className="col-12 p-lg-4 p-2 p-lg-3 mt-3 mt-lg-5" style={{maxHeight: "55vh"}}>
             <motion.h1
-              className="titulo text-center text-black mt-4 m-plus-rounded-1c-regular pb-4 pt-3"
+              className="titulo text-center text-black mt-4 m-plus-rounded-1c-regular pt-3"
               initial="hidden"
               whileInView="visible"
               variants={variants}

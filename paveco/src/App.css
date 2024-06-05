@@ -1042,11 +1042,17 @@ a {
   }
 
   .b-card {
-    font-size: 1.5em;
     height: 75vh;
     width: 100%;
+    h4{
+      font-size:medium;
+    }
   }
-
+  .presentacion{
+    p{
+      font-size: small!important ;
+    }
+  }
   .fa-circle-check {
     color: var(--color-verde-brillante);
     font-size: 50px;
@@ -1104,11 +1110,54 @@ a {
     }
     filter:drop-shadow(0px 2px 6px #00ff2271) ;
   }
+  .facebook, .instagram, .wsp{
+    position: relative;
+    bottom: 6vh;
+    margin-left: 5px;
+    font-size: 35px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .facebook, .instagram, .wsp{
+    position: fixed!important;
+
+  }
   .not-mobile{
     display: none;
+  }
+  .wsp {
+    position: fixed;
+    bottom: calc(6vh - 25px);
+    z-index: 100;
+    left: calc(0.1vw + 1px);
+    box-shadow: 0px 0px 4px --color-verde-claro();
+    transition: all 0.3s ease-in!important;
+    font-size: 2.2em;
+    color: #f3f5f7;
+    filter: drop-shadow(2px 2px 2px black);
+  }
+  .instagram {
+    position: fixed;
+    bottom: calc(10vh - 15px);
+    z-index: 100;
+    left: calc(0.1vw + 1px);
+    box-shadow: 0px 0px 4px --color-verde-claro();
+    transition: all 0.3s ease-in!important;
+    font-size: 2.2em;
+    color: #f3f5f7;
+    filter: drop-shadow(2px 2px 2px black);
+  }
+  .facebook {
+    position: fixed;
+    bottom: calc(14vh - 5px);
+    z-index: 100;
+    left: calc(0.1vw + 1px);
+    box-shadow: 0px 0px 4px --color-verde-claro();
+    transition: all 0.3s ease-in!important;
+    font-size: 2.2em;
+    color: #f3f5f7;
+    filter: drop-shadow(2px 2px 2px black);
   }
   .u-card {
     height: 100%;
@@ -1287,6 +1336,11 @@ a {
 }
 
 @media only screen and (min-width: 992px) {
+  .presentacion{
+    p{
+      font-size: medium!important ;
+    }
+  }
   .b-carousel-md {
     display: none;
   }
@@ -1343,6 +1397,11 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
+  .presentacion{
+    p{
+      font-size: unset!important ;
+    }
+  }
   .text-on-image {
     color: var(--color-white);
     margin-bottom: 1000px;

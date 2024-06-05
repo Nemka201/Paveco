@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, transform } from "framer-motion";
+import { motion } from "framer-motion";
 
 function BeneficiosCard(props) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -24,16 +24,13 @@ function BeneficiosCard(props) {
     visible: { transform: "rotateY(5deg)", x:0},
   };
   const logoStyle = {
-    width: "7.2vh",
+    width: "calc(10px + 2.4vw)",
   };
   const variantsMap = {
     leftIn: leftIn,
     bottomIn: bottomIn,
     rightIn: rightIn,
   };
-  const heightText = {
-    // height: "3.1em"
-  }
   let variants = variantsMap[props.animation] || {};
 
   return (
@@ -49,7 +46,7 @@ function BeneficiosCard(props) {
         onClick={handleClick}
       >
         <div className="card-front">
-          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s" style={heightText}>
+          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio}
           </h4>
           <div className="text-center not-mobile p-lg-1">
@@ -62,7 +59,7 @@ function BeneficiosCard(props) {
             )}
           </div>
           <hr className="me-4 ms-4" />
-          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-2 pb-0 m-plus-rounded-1c-regular text-black-s" style={heightText}>
+          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-2 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio2}
           </h4>
           <div className="text-center not-mobile p-lg-1">
@@ -75,10 +72,10 @@ function BeneficiosCard(props) {
             )}
           </div>
           <hr className="me-4 ms-4" />
-          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-2 pb-0 m-plus-rounded-1c-regular text-black-s" style={heightText}>
+          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-2 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio3}
           </h4>
-          <div className="text-center not-mobile p-lg-1">
+          <div className="text-center not-mobile p-lg-1 pt-0">
             {props.imagen3 && (
               <img
                 src={require(`../assets/beneficios/${props.imagen3}`)}
@@ -88,7 +85,7 @@ function BeneficiosCard(props) {
             )}
           </div>
           <hr className="me-4 ms-4" />
-          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-2 pb-0 m-plus-rounded-1c-regular text-black-s" style={heightText}>
+          <h4 className="ps-2 pe-2 pt-1 pe-lg-4 ps-lg-4 pt-lg-2 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio4}
           </h4>
           <div className="text-center not-mobile p-lg-1">
