@@ -1,38 +1,39 @@
-import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function UsosComponent(props) {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const classContainer = `col-12 col-lg-6 ${
-    props.classContainer
-  } p-5 usos-c u-card ${isFlipped ? "flipped" : ""}`;
 
-  const handleMouseEnter = () => {
-    setIsFlipped(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsFlipped(false);
+  const leftIn = {
+    hidden: { x:-50 },
+    visible: { x:0},
   };
-
-  const backCardStyle = {
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${props.cardBack})`,
+  const rightIn = {
+    hidden: { x:50 },
+    visible: {x:0},
   };
+  const variantsMap = {
+    leftIn: leftIn,
+    rightIn: rightIn,
+  };
+  let variants = variantsMap[props.animation] || {};
+  const classContainer = `col-12 col-lg-8 p-lg-5 pt-lg-4 pb-lg-4 p-2 mt-2 u-card ${props.classContainer}`;
 
   return (
-    <div style={{ height: "25vh" }} className={classContainer}>
+    <motion.div style={{ height: "18vh" }} className={classContainer}
+    initial="hidden"
+    whileInView="visible"
+    variants={variants}
+    transition={{ delay: 0.1, type: "spring", stiffness:500, damping: 2500  }}>
       <div className="">
-        <div className="text-center pb-4">
-          <i
-            className="fa-solid fa-circle-down text-center pt-0 pb-4 usos-t"
-            style={{ fontSize: "2em" }}
-          ></i>
+        <div className="text-center text-light">
+          {/* <i
+            className="fa-solid fa-circle-down pt-4 pb-3 u-text"
+            style={{ fontSize: "2em", left:"10vw" }}
+          ></i> */}
         </div>
-        <h2 className="text-center usos-t">{props.text}</h2>
+        <h2 className="text-center usos-t m-lg-5 p-4 mt-lg-3 pe-lg-5 pe-lg-5 text-light p-lg-3">{props.text}</h2>
       </div>
-      <div className="card-back" style={backCardStyle}></div>
-    </div>
+    </motion.div>
   );
 }
 

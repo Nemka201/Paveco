@@ -3,28 +3,6 @@ import { motion, transform } from "framer-motion";
 
 function BeneficiosCard(props) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [lastEnter, setLastEnter] = useState(0);
-
-  // const handleMouseEnter = () => {
-  //   const now = Date.now();
-  //   const timeSinceEnter = now - lastEnter;
-  //   if (timeSinceEnter > 1000) {
-  //     setIsFlipped(true);
-  //     setLastEnter(now); 
-  //   }
-  // };
-
-  // const handleMouseLeave = () => {
-  //   const now = Date.now();
-  //   const timeSinceEnter = now - lastEnter;
-  //   if (timeSinceEnter > 1000) { 
-  //     setIsFlipped(false);
-  //   } else {
-  //     setTimeout(() => {
-  //       setIsFlipped(false);
-  //     }, 2500 - timeSinceEnter); 
-  //   }
-  // };
   const handleClick = () => {
     setIsFlipped(prevState => !prevState);
   };
@@ -59,7 +37,7 @@ function BeneficiosCard(props) {
   let variants = variantsMap[props.animation] || {};
 
   return (
-    <div className="pe-lg-3 pt-0 ps-2 pe-3 mt-1 col-12 col-lg-4 col-xl-4 card-container m-0">
+    <div className="pe-lg-3 pt-0 ps-2 pe-3 mt-1 col-12 col-lg-4 col-xl-4 card-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -68,8 +46,6 @@ function BeneficiosCard(props) {
         className={`b-card ${props.className} mb-2 ${
           isFlipped ? "flipped" : ""
         }`}
-        // onMouseEnter={handleMouseEnter}
-        // onMouseLeave={handleMouseLeave}
         onClick={handleClick}
       >
         <div className="card-front">

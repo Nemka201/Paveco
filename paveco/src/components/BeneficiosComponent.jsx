@@ -1,6 +1,6 @@
 import BeneficiosCard from "./BeneficiosCard";
 import { motion } from "framer-motion";
-import firstImage from "./../assets/beneficios/1.jpg";
+import firstImage from "./../assets/beneficios/WEB1.png";
 import CarouselBeneficiosMobile from "./CarouselBeneficiosMobile";
 
 function BeneficiosComponent() {
@@ -10,9 +10,9 @@ function BeneficiosComponent() {
   };
   return (
     <>
-      <div className="container-fluid bg-white-s">
+      <div className="container-fluid p-lg-5 pt-0 pt-lg-0 bg-white-s">
         <div className="row">
-          <div className="col-12 p-3 p-lg-3 mt-3 mt-lg-5 b-view">
+          <div className="col-12 p-4 p-lg-3 mt-3 mt-lg-5 b-view">
             <motion.h1
               className="titulo text-center text-black mt-4 m-plus-rounded-1c-regular pb-4 pt-3"
               initial="hidden"
@@ -24,7 +24,7 @@ function BeneficiosComponent() {
             </motion.h1>
             <CarouselBeneficiosMobile />
             <div
-              className="row ps-3 pe-3 ps-md-5 pe-md-5"
+              className="row ps-3 pe-3 ps-md-5 pe-md-5 m-5 mt-1"
               initial="hidden"
               whileInView="visible"
               variants={variants}
@@ -42,7 +42,7 @@ function BeneficiosComponent() {
                 imagen3="cmp.png"
                 imagen4="apl.png"
                 cardBack={firstImage}
-                className="rotateY not-mobile"
+                className="not-mobile"
                 animation="leftIn"
               />
               <BeneficiosCard
@@ -57,7 +57,7 @@ function BeneficiosComponent() {
                 imagen3="imp.png"
                 imagen4="bio.png"
                 cardBack={firstImage}
-                className="midCard not-mobile"
+                className="not-mobile"
                 animation="bottomIn"
               />
               <BeneficiosCard
@@ -71,7 +71,7 @@ function BeneficiosComponent() {
                 imagen3="cld.png"
                 imagen4="prd.png"
                 cardBack={firstImage}
-                className="rotateYPositive not-mobile"
+                className="not-mobile"
                 animation="rightIn"
               />
             </div>

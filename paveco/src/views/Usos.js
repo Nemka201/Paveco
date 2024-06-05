@@ -1,6 +1,4 @@
 import UsosComponent from "../components/UsosComponent";
-import firstImage from "./../assets/beneficios/1.jpg";
-
 function Usos() {
   return (
     <>
@@ -10,32 +8,29 @@ function Usos() {
             <h1 className="titulo text-center pb-4 pt-4 m-plus-rounded-1c-regular text-white-s mt-5">USOS</h1>
             <div className="row text-usos roboto-medium card-container">
               <UsosComponent
-                classContainer="bg-black text-white-s"
+                classContainer="usos-left"
                 text="Reparación de baches y grietas entre otra fracturas superficiales."
-                cardBack={firstImage}
-
+                animation="leftIn"
               />
               <UsosComponent
-                classContainer="bg-white text-black"
+                classContainer="usos-right"
                 text="Capa de rodamiento en suelos estabilizados en caminos vecinales o rurales, alcantarillas, reparación de ruptura de vías por empresas prestadoras de servicios:
                 - Aguas
                 – Cable Tv/Internet
                 – Luz
                 – Gas"
-                cardBack={firstImage}
+                animation="rightIn"
 
               />
               <UsosComponent
-                classContainer="bg-white text-black"
+                classContainer="usos-left"
                 text="Ideal para reparación y mantenimientos de rutas y Autovias, ya sea por la durabilidad del producto como por la rápida solución que brinda ECOPAV."
-                cardBack={firstImage}
-
+                animation="leftIn"
               />
               <UsosComponent
-                classContainer="bg-black text-white-s"
+                classContainer="usos-right"
                 text="Caminerías en parques/paseos, campos deportivos, ciclovias y otros."
-                cardBack={firstImage}
-
+                animation="rightIn"
               />
             </div>
           </div>

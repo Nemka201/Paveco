@@ -7,58 +7,58 @@ function ModalNavbar(props) {
   };
   return (
     <>
-      <div className="modal sticky-bottom" style={{ display: visible ? "flex" : "none", justifyContent:"center"}}>
-        <div className="container-fluid">
-          <div className="row p-5">
+      <div className="modal sticky-bottom" style={{ display: visible ? "inline-block" : "none", justifyContent:"end"}}>
+        <div className="container pt-4">
+          <div className="row text-end">
             <div className="col-12">
               <ul className="navbar-nav">
-                <li className="nav-item mt-0 pe-4">
-                  <a className="nav-link pe-5">
+                <li className="nav-item mt-0">
+                  <a className="nav-link">
                   <Link smooth to="/" onClick={closeModal}>
                       Home
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-4">
-                  <a className="nav-link pe-5" onClick={closeModal}>
+                <li className="nav-item mt-0 ">
+                  <a className="nav-link" onClick={closeModal}>
                     <Link smooth to="/#beneficios">
                       Beneficios
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-4">
-                  <a className="nav-link pe-5">
+                <li className="nav-item mt-0">
+                  <a className="nav-link">
                   <Link smooth to="/Productos-y-Servicios">
                       Productos y Servicios
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-4">
-                  <a className="nav-link pe-5" onClick={closeModal}>
+                <li className="nav-item mt-0">
+                  <a className="nav-link" onClick={closeModal}>
                     <Link smooth to="/#usos">
                       Usos
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-4">
-                  <a className="nav-link pe-5">
+                <li className="nav-item mt-0">
+                  <a className="nav-link">
                     <Link smooth to="/#fichatecnica" onClick={closeModal}>
                       Ficha Técnica
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-4">
-                  <a className="nav-link pe-5">
+                <li className="nav-item mt-0 ">
+                  <a className="nav-link">
                     <Link smooth to="/Noticias" onClick={closeModal}>
                       Noticias
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item mt-0 pe-4">
+                <li className="nav-item mt-0 ">
                   <div>
                     <i
                       onClick={closeModal}
-                      className="btn-x nav-link pe-5"
+                      className="btn-x nav-link"
                     >
                       <i class="fa-solid fa-x"></i>
                     </i>{" "}
