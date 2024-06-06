@@ -4,12 +4,12 @@ function UsosComponent(props) {
 
 
   const leftIn = {
-    hidden: { x:-50 },
+    hidden: { x:"-2%" },
     visible: { x:0},
   };
   const rightIn = {
-    hidden: { x:50 },
-    visible: {x:0},
+    hidden: { x:"2%" },
+    visible: {x:-5},
   };
   const variantsMap = {
     leftIn: leftIn,

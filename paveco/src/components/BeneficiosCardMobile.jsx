@@ -37,7 +37,7 @@ function BeneficiosCardMobile(props) {
               />
             )}
           </div>
-          <hr className="me-4 ms-4" />
+          <hr className="me-4 ms-4"/>
           <h4 className="ps-3 pe-2 pt-3 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio2}
           </h4>

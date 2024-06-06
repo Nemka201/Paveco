@@ -24,7 +24,7 @@ function Presentacion() {
                   initial="hidden"
                   whileInView="visible"
                   variants={variants}
-                  transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+                  transition={{ duration: 0.3, delay: 0.5, ease: "easeOut" }}
                 >
                   PAV<span className="green-text">ECO</span> ARGENTINA es una empresa especializada en la
                   formulación de asfalto en frío e infraestructura vial de
@@ -56,7 +56,7 @@ function Presentacion() {
                   initial="hidden"
                   whileInView="visible"
                   variants={variants}
-                  transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+                  transition={{ duration: 0.3, delay: 0.7, ease: "easeOut" }}
                 >
                   Es un Superpave modificado con biopolímeros de alto
                   rendimiento formulado con aditivos especiales Específicamente
@@ -80,7 +80,7 @@ function Presentacion() {
                   initial="hidden"
                   whileInView="visible"
                   variants={variants}
-                  transition={{ duration: 0.5, delay: 1.1, ease: "easeOut" }}
+                  transition={{ duration: 0.25, delay: 0, ease: "easeOut" }}
                 >
                   Nuestra compañía cuenta con el respaldo y aval de nuestra casa
                   matriz en Estados Unidos, Por esto <span className="green-text">ECO</span>PAV será producido y

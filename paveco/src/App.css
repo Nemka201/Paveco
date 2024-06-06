@@ -553,6 +553,7 @@ a {
 
 .left-line {
   position: fixed;
+  display:none;
   top: 10%;
   left: 2.8em;
   transform: translateX(-50%);
@@ -565,6 +566,7 @@ a {
 
 .right-line {
   position: fixed;
+  display:none;
   top: 10%;
   right: 4em;
   transform: translateX(-50%);
@@ -596,13 +598,9 @@ a {
 }
 
 .presentacion {
-  font-size: 1.4em;
+  font-size: 0.6em;
 }
-.rectangulito{
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  width: 25em;
-  height: 25em;
-}
+
 .b-card {
   border: 1px solid rgb(179, 179, 179);
   box-shadow: 4.0px 8.0px 8.0px hsla(0, 0%, 35%, 0.38);
@@ -612,8 +610,6 @@ a {
   align-items: center;
   color: black !important;
   background-color: whitesmoke;
-  position: relative;
-
 }
 .text-white-s{
   color: #e8e8e8!important;
@@ -751,7 +747,7 @@ a {
   transition: all 0.5s ease;
 }
 .bg-blur {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.35)!important;
   backdrop-filter: blur(4px);
   box-shadow: 0px 0px 12px rgba(45, 45, 45, 0.616);
 }
@@ -844,18 +840,20 @@ a {
   border: 1px solid var(--color-hover);
   color: #00ff22;
 }
-
-.nav-link {
-  color: var(--color-white);
-  transition: all 0.5s ease;
-  cursor: pointer;
-  font-size: 0.95rem;
+.bg-white-blur{
+  background-color: #e8e8e878;
 }
-
+.nav-link{
+    color: var(--color-white);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
 .nav-link:hover {
-  color: var(--color-hover);
-  transition: all 0.5s ease;
-  text-decoration: underline !important;
+    color: var(--color-hover);
+    transition: all 0.5s ease;
+    text-decoration: underline !important;
+
 }
 @media screen and (max-width: 600px) {
   .text-on-image {
@@ -956,6 +954,7 @@ a {
   }
   .b-carousel-md {
     position: relative;
+    display:block;
   }
   .u-card {
     height: 100%;
@@ -1049,8 +1048,9 @@ a {
     }
   }
   .presentacion{
+    padding-top: 5em!important;
     p{
-      font-size: small!important ;
+      font-size: 1.5vw!important ;
     }
   }
   .fa-circle-check {
@@ -1075,12 +1075,6 @@ a {
       font-size: 3vw!important;
     }
   }
-
-
-  .nav-lg-item {
-    display: none;
-  }
-
   .bolsa {
     display: none;
   }
@@ -1176,11 +1170,6 @@ a {
     position: initial;
     right: 0;
   }
-
-  .nav-lg-item {
-    display: none;
-  }
-
   #upButton {
     right: calc(1vw + 1rem);
     height: 33px;
@@ -1338,7 +1327,7 @@ a {
 @media only screen and (min-width: 992px) {
   .presentacion{
     p{
-      font-size: medium!important ;
+      font-size:1.3rem!important ;
     }
   }
   .b-carousel-md {
@@ -1350,10 +1339,6 @@ a {
   #b-view{
     height: 100vh;
   }
-  .nav-lg-item {
-    display: flex;
-  }
-
   .btn-show-nav {
     display: none;
   }
@@ -1387,7 +1372,9 @@ a {
   }
 
   .presentacion {
-    font-size: 1.4em;
+    p{
+      font-size: calc(0.5vw + 1vh )!important;
+    }
   }
 
   .aside-text {
@@ -1399,7 +1386,7 @@ a {
 @media only screen and (min-width: 1200px) {
   .presentacion{
     p{
-      font-size: unset!important ;
+      font-size: calc(0.5vw + 1.5vh )!important;
     }
   }
   .text-on-image {
