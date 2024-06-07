@@ -32,6 +32,7 @@
 }
 
 .bolsa {
+  display: none;
   background-image: url(./assets/bolsa.png);
   position: absolute;
   background-size: cover;
@@ -255,6 +256,7 @@ a {
   position: fixed;
   border-radius: 5px;
   bottom: 5vh;
+  left:85%;
   z-index: 100;
   background-color: rgba(29, 29, 29, 0.4);
   /* background-color: transparent!important; */
@@ -303,7 +305,7 @@ a {
   left: calc(0.2vw + 5px);
   box-shadow: 0px 0px 4px --color-verde-claro();
   transition: all 0.3s ease-in!important;
-  font-size: 2.2em;
+  font-size: 1.3em;
   color: #f3f5f7;
   filter: drop-shadow(2px 2px 2px black);
 }
@@ -314,7 +316,7 @@ a {
   left: calc(0.2vw + 5px);
   box-shadow: 0px 0px 4px --color-verde-claro();
   transition: all 0.3s ease-in!important;
-  font-size: 2.2em;
+  font-size: 1.3em;
   color: #f3f5f7;
   filter: drop-shadow(2px 2px 2px black);
 }
@@ -325,7 +327,7 @@ a {
   left: calc(0.2vw + 5px);
   box-shadow: 0px 0px 4px --color-verde-claro();
   transition: all 0.3s ease-in!important;
-  font-size: 2.2em;
+  font-size: 1.3em;
   color: #f3f5f7;
   filter: drop-shadow(2px 2px 2px black);
 }
@@ -595,21 +597,35 @@ a {
 
 .text-background {
   isolation: isolate;
+  position: relative;
+  bottom: 10%;
+  h1{
+    font-size: 4em;
+    text-align: center;
+  }
+  h5{
+    text-align: start;
+    font-size: 1em!important;
+  }  
 }
 
 .presentacion {
-  font-size: 0.6em;
+  font-size: 0.55em!important;
 }
 
 .b-card {
   border: 1px solid rgb(179, 179, 179);
   box-shadow: 4.0px 8.0px 8.0px hsla(0, 0%, 35%, 0.38);
   border-radius: 1.25em 1.25em 1.25em;
+  min-height: 70vh!important;
   cursor: pointer;
   transition: all 0.3s ease!important;
   align-items: center;
   color: black !important;
   background-color: whitesmoke;
+  h4{
+    font-size: calc(2.6vh - 5px)!important;
+  }
 }
 .text-white-s{
   color: #e8e8e8!important;
@@ -742,14 +758,12 @@ a {
   border-radius: 1.25em 1.25em 1.25em;
 }
 .card-back:hover{
-  /* border: 1px double var(--color-verde-claro);
-  box-shadow: 4.0px 8.0px 8.0px #075e1454; */
   transition: all 0.5s ease;
 }
 .bg-blur {
   background-color: rgba(0, 0, 0, 0.35)!important;
-  backdrop-filter: blur(4px);
-  box-shadow: 0px 0px 12px rgba(45, 45, 45, 0.616);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 12px rgba(45, 45, 45, 0.62);
 }
 
 .navbar {
@@ -840,8 +854,8 @@ a {
   border: 1px solid var(--color-hover);
   color: #00ff22;
 }
-.bg-white-blur{
-  background-color: #e8e8e878;
+.bg-white-traslucent{
+  background-color: #e8e8e841;
 }
 .nav-link{
     color: var(--color-white);
@@ -1001,7 +1015,9 @@ a {
   }
 
   .presentacion {
-    font-size: 1em;
+    p{
+      font-size: 1.5em;
+    }
   }
 
   .right-line {
@@ -1050,7 +1066,7 @@ a {
   .presentacion{
     padding-top: 5em!important;
     p{
-      font-size: 1.5vw!important ;
+      font-size: calc(1vw + 1vh)!important ;
     }
   }
   .fa-circle-check {
@@ -1106,7 +1122,7 @@ a {
   }
   .facebook, .instagram, .wsp{
     position: relative;
-    bottom: 6vh;
+    bottom: 6%;
     margin-left: 5px;
     font-size: 35px;
   }
@@ -1115,7 +1131,6 @@ a {
 @media only screen and (min-width: 768px) {
   .facebook, .instagram, .wsp{
     position: fixed!important;
-
   }
   .not-mobile{
     display: none;
@@ -1394,7 +1409,13 @@ a {
     margin-bottom: 1000px;
     padding: 0;
   }
-
+  .b-card{
+    margin-top:6% ;
+    height: 70vh!important;
+    h4{
+      font-size: 1em!important;
+    }
+  }
   .aside-text {
     position: relative;
     right: 7vw;

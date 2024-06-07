@@ -60,7 +60,7 @@ function Home() {
           className="wsp"
           title="Enviar un WhatsApp!"
         >
-          <i class="fa-brands fa-whatsapp"></i>
+          <i className="fa-brands fa-whatsapp"></i>
         </a>
       <div
         className="view"
@@ -71,7 +71,6 @@ function Home() {
       </div>{" "}
       <div
         className="view"
-        id="b-view"
         ref={(el) => (viewsRef.current[2] = el)}
         tabIndex={-1}
       >

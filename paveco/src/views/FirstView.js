@@ -1,5 +1,5 @@
 import { HashLink as Link } from "react-router-hash-link";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 function FirstView() {
   const variants = {

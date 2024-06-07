@@ -4,7 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-blur sticky-top text-light" style={{height: "75px"}}>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-blur sticky-top text-light">
         <div className="container-fluid roboto-regular">
           <a className="navbar-brand" href="/">              
           <img
@@ -14,10 +14,10 @@ function Navbar() {
             height="54"
           ></img>
           </a>
-          <button className="navbar-toggler bg-white-blur" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler bg-white-traslucent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-end pe-5" id="navbarNavAltMarkup">
+          <div className="collapse navbar-collapse justify-content-end text-center pe-5" id="navbarNavAltMarkup">
             <div className="navbar-nav">
                 <Link smooth to="/#home" className="nav-link" aria-current="page">
                   Inicio

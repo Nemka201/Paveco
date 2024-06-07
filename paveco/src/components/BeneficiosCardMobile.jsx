@@ -14,7 +14,7 @@ function BeneficiosCardMobile(props) {
     backgroundImage: `url(${props.cardBack})`,
   };
   const logoStyle = {
-    width: "11.5vw",
+    width: "11%",
   };
 
   return (
@@ -25,7 +25,7 @@ function BeneficiosCardMobile(props) {
         onClick={handleClick}
       >
         <div className="card-front">
-          <h4 className="ps-3 pe-2 pt-3 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
+          <h4 className="ps-3 pe-2 pt-4 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio}
           </h4>
           <div className="text-end me-4">
@@ -38,7 +38,7 @@ function BeneficiosCardMobile(props) {
             )}
           </div>
           <hr className="me-4 ms-4"/>
-          <h4 className="ps-3 pe-2 pt-3 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
+          <h4 className="ps-3 pe-2 pt-2 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio2}
           </h4>
           <div className="text-end me-4">
@@ -51,7 +51,7 @@ function BeneficiosCardMobile(props) {
             )}
           </div>
           <hr className="me-4 ms-4" />
-          <h4 className="ps-3 pe-2 pt-3 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
+          <h4 className="ps-3 pe-2 pt-2 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio3}
           </h4>
           <div className="text-end me-4">
@@ -64,7 +64,7 @@ function BeneficiosCardMobile(props) {
             )}
           </div>
           <hr className="me-4 ms-4" />
-          <h4 className="ps-3 pe-2 pt-3 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
+          <h4 className="ps-3 pe-2 pt-2 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio4}
           </h4>
           <div className="text-end me-4">
