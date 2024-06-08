@@ -17,12 +17,6 @@ function Footer() {
               <a href="https://www.instagram.com/paveco.asfalto?utm_source=qr&igsh=emh3MDRxMWJ0dGg1">
                 <i class="fa-brands fa-instagram pe-1 pe-md-3"></i>
               </a>
-              <a href="/">
-                <i class="fa-brands fa-youtube pe-1 pe-md-3"></i>
-              </a>
-              <a href="/">
-                <i class="fa-brands fa-tiktok pe-1 pe-md-2"></i>
-              </a>
             </div>
           </div>
         </div>

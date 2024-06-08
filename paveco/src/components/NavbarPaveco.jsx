@@ -10,12 +10,12 @@ function Navbar() {
           <img
             src={logo}
             alt="Bootstrap"
-            width="75"
-            height="54"
+            width="60"
+            height="45"
           ></img>
           </a>
-          <button className="navbar-toggler bg-white-traslucent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+          <button className="navbar-toggler btn-bars" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="fa-solid fa-bars p-1"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end text-center pe-5" id="navbarNavAltMarkup">
             <div className="navbar-nav">

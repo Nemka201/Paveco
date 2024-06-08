@@ -22,10 +22,10 @@ function FirstView() {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           className="text-background container-fluid ps-5 pt-5"
         >
-          <div className="row pt-5 ps-0 pe-4 ps-md-5">
+          <div className="row pt-5 ps-0 pe-4 ps-md-5 mt-5">
             <div className="bolsa"></div>
             <div className="col-12 col-md-8 col-lg-6 text-black mt-5 pt-5 ps-md-5">
-              <h1 className="ecopav mt-0 pb-2 pt-5 mt-5 m-plus-rounded-1c-regular">
+              <h1 className="ecopav mt-0 pb-2 pt-5 mt-5 m-plus-rounded-1c-regular text-start">
                 PAV<span className="green-text">ECO</span>
               </h1>
               <h5 className="text-white roboto-regular">
