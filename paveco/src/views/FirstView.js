@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 function FirstView() {
   const variants = {
-    hiddenY: { opacity: 0, y: "-20vh" },
-    visibleY: { opacity: 1, y: "-20vh" },
+    hiddenY: { opacity: 0, y: "-20%" },
+    visibleY: { opacity: 1, y: "calc(-25% + 5vh)" },
     hiddenX: { opacity: 0, x: "-20vh", y: "20vh" },
     visibleTop: { opacity: 1, x: "+36vh", y: "15vh" },
     visibleMiddle: { opacity: 1, x: "+36svh", y: "20vh" },
@@ -25,27 +25,30 @@ function FirstView() {
           <div className="row pt-5 ps-0 pe-4 ps-md-5 mt-5">
             <div className="bolsa"></div>
             <div className="col-12 col-md-8 col-lg-6 text-black mt-5 pt-5 ps-md-5">
-              <h1 className="ecopav mt-0 pb-2 pt-5 mt-5 m-plus-rounded-1c-regular text-start">
-                PAV<span className="green-text">ECO</span>
-              </h1>
-              <h5 className="text-white roboto-regular">
-                Nuestro producto insignia es un asfalto en frío ecológico.
-              </h5>
-              <h5 className="text-white roboto-regular">
-                Gracias a su formulación, es de tipo SUPERPAVE, lo que le
-                confiere características únicas.
-              </h5>
-              <h5 className="roboto-regular text-white pb-4">
-                Está disponible en prácticas bolsas de 25 kg, Big Bags de 500 kg
-                y a granel.
-              </h5>
-              <Link smooth to="/Contacto">
-                <button className="btn btn-contacto roboto-regular">
-                  ¡Contactanos!
-                </button>
-              </Link>
+              <div className="header-text">
+                <h1 className="ecopav mt-0 pb-2 pt-5 mt-5 m-plus-rounded-1c-regular text-start">
+                  PAV<span className="green-text">ECO</span>
+                </h1>
+                <h5 className="text-white roboto-regular">
+                  Nuestro producto insignia es un asfalto en frío ecológico.
+                </h5>
+                <h5 className="text-white roboto-regular">
+                  Gracias a su formulación, es de tipo SUPERPAVE, lo que le
+                  confiere características únicas.
+                </h5>
+                <h5 className="roboto-regular text-white pb-4">
+                  Está disponible en prácticas bolsas de 25 kg, Big Bags de 500
+                  kg y a granel.
+                </h5>
+                <Link smooth to="/Contacto">
+                  <button className="btn btn-contacto roboto-regular">
+                    ¡Contactanos!
+                  </button>
+                </Link>
+              </div>
+
               <div
-                className="rectangulito"
+                className=""
                 initial="hiddenX"
                 whileInView="visibleRectangulo"
                 variants={variants}

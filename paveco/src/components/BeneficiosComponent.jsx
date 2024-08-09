@@ -10,7 +10,7 @@ function BeneficiosComponent() {
   };
   return (
     <>
-      <div className="container-fluid p-lg-5 pt-0 pt-lg-0 bg-white-s">
+      <div className="container p-lg-5 pt-0 pt-lg-0 bg-white-s">
         <div className="row">
           <div className="col-12 p-lg-4 p-4 p-lg-3 mt-3 mt-lg-5" style={{maxHeight: "80vh"}}>
             <motion.h1
@@ -24,7 +24,7 @@ function BeneficiosComponent() {
             </motion.h1>
             <CarouselBeneficiosMobile />
             <div
-              className="row ps-3 pe-3 ps-md-5 pe-md-5 m-5 mt-1"
+              className="row ps-3 pe-3 ps-md-1 pe-md-1 mt-1"
               initial="hidden"
               whileInView="visible"
               variants={variants}
@@ -50,7 +50,7 @@ function BeneficiosComponent() {
                 USA."
                 beneficio2="No contamina, no emite gases y no compromete la salud de los trabajadores."
                 beneficio3="Al ser su composición 95% petróleo y no contener agua, la película que crea es ampliamente
-  menos permeable al agua que otros asfaltos."
+                menos permeable al agua que otros asfaltos."
                 beneficio4="Asfalto modificado con polimeros y agregado de Bio-polímeros."
                 imagen="1.png"
                 imagen2="eco.png"

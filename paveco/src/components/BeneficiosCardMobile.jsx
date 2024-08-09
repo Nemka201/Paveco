@@ -19,7 +19,7 @@ function BeneficiosCardMobile(props) {
 
   return (
     <div className="pe-lg-3 pt-0 ps-0 pe-0 mt-1 col-12 card-container m-0">
-      <div className={`b-card ${props.className} mb-2 ${
+      <div className={`b-card-m ${props.className} mb-2 ${
           isFlipped ? "flipped" : ""
         }`}
         onClick={handleClick}

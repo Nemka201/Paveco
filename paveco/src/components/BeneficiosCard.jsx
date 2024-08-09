@@ -13,15 +13,15 @@ function BeneficiosCard(props) {
   };
   const leftIn = {
     hidden: { transform: "rotateY(-180deg)", x:-150 },
-    visible: { transform: "rotateY(-5deg)", x:0},
+    visible: { transform: "rotateY(0deg)", x:0},
   };
   const bottomIn = {
     hidden: { y:0 },
-    visible: { y:-10, height: "101.5%" },
+    visible: { y:0 },
   };
   const rightIn = {
     hidden: { transform: "rotateY(180deg)", x:150 },
-    visible: { transform: "rotateY(5deg)", x:0},
+    visible: { transform: "rotateY(0deg)", x:0},
   };
   const logoStyle = {
     width: "calc(10px + 2.4vw)",
@@ -34,7 +34,7 @@ function BeneficiosCard(props) {
   let variants = variantsMap[props.animation] || {};
 
   return (
-    <div className="pe-lg-3 pt-0 ps-2 pe-3 mt-1 col-12 col-lg-4 col-xl-4 card-container">
+    <div className="pe-lg-2 ps-1 pe-1 mt-1 col-4 card-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
