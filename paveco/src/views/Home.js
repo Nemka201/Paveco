@@ -6,7 +6,7 @@ import SecondView from "./SecondView";
 import ThirdView from "./ThirdView";
 import LastView from "./LastView";
 import { motion } from "framer-motion";
-import Usos from "./Usos";
+import Socios from "../components/Socios";
 
 function Home() {
   const viewsRef = useRef([]);
@@ -82,6 +82,13 @@ function Home() {
         tabIndex={-1}
       >
         <LastView />
+      </div>{" "}
+      <div
+        className="view"
+        ref={(el) => (viewsRef.current[4] = el)}
+        tabIndex={-1}
+      >
+        <Socios/>
       </div>{" "}
     </motion.div>
   );

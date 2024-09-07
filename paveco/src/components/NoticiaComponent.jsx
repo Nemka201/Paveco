@@ -1,6 +1,6 @@
 function NoticiaComponent(props) {
   const classContainer = `container ${props.classContainer} p-2 pt-0 mt-0`;
-  const classCard = `col-12 noticia-card ${props.classCard} ps-3 pe-3 ps-lg-5 pe-lg-5 pt-3 pb-2`;
+  const classCard = `col-12 noticia-card bg-white ${props.classCard} ps-3 pe-3 ps-lg-5 pe-lg-5 pt-3 pb-2`;
   const image = props.image;
   return (
     <>

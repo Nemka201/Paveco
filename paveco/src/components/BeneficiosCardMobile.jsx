@@ -14,15 +14,15 @@ function BeneficiosCardMobile(props) {
     backgroundImage: `url(${props.cardBack})`,
   };
   const logoStyle = {
-    width: "11%",
+    width: "10%",
   };
 
   return (
     <div className="pe-lg-3 pt-0 ps-0 pe-0 mt-1 col-12 card-container m-0">
-      <div className={`b-card-m ${props.className} mb-2 ${
-          isFlipped ? "flipped" : ""
+      <div className={`b-card-m ${props.className} mb-2 ${isFlipped ? "flipped|" : ""
         }`}
         onClick={handleClick}
+        id="b-card-ml"
       >
         <div className="card-front">
           <h4 className="ps-3 pe-2 pt-4 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
@@ -34,10 +34,11 @@ function BeneficiosCardMobile(props) {
                 src={require(`../assets/beneficios/${props.imagen}`)}
                 alt="Imagen de beneficio"
                 style={logoStyle}
+                className="b-logo-m"
               />
             )}
           </div>
-          <hr className="me-4 ms-4"/>
+          <hr className="me-4 ms-4" />
           <h4 className="ps-3 pe-2 pt-2 pe-lg-4 ps-lg-4 pt-lg-4 pb-0 m-plus-rounded-1c-regular text-black-s">
             {props.beneficio2}
           </h4>
@@ -47,6 +48,8 @@ function BeneficiosCardMobile(props) {
                 src={require(`../assets/beneficios/${props.imagen2}`)}
                 alt="Imagen de beneficio"
                 style={logoStyle}
+                className="b-logo-m"
+
               />
             )}
           </div>
@@ -60,6 +63,8 @@ function BeneficiosCardMobile(props) {
                 src={require(`../assets/beneficios/${props.imagen3}`)}
                 alt="Imagen de beneficio"
                 style={logoStyle}
+                className="b-logo-m"
+
               />
             )}
           </div>
@@ -73,6 +78,7 @@ function BeneficiosCardMobile(props) {
                 src={require(`../assets/beneficios/${props.imagen4}`)}
                 alt="Imagen de beneficio"
                 style={logoStyle}
+                className="b-logo-m"
               />
             )}
           </div>

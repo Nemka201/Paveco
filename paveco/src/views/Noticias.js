@@ -7,13 +7,11 @@ function Noticias() {
   return (
     <>
       <Navbar />
-      <div
-        className="background-noticias pt-3"
-      >
+      <div className="background-noticias pt-3">
         <section>
           <NoticiaComponent
             classContainer=""
-            classCard="bg-white-p text-black"
+            classCard="text-black"
             image="1.png"
             titulo="ASFALTO EN FRÍO: UNA FORMA DE COMBATIR EL CALENTAMIENTO GLOBAL"
             descripcion1="
@@ -24,7 +22,7 @@ function Noticias() {
           />
           <NoticiaComponent
             classContainer=""
-            classCard="bg-white-p text-black"
+            classCard="text-black"
             image="1.png"
             titulo="ASFALTO EN FRÍO: UNA FORMA DE COMBATIR EL CALENTAMIENTO GLOBAL"
             descripcion1="

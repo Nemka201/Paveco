@@ -19,6 +19,7 @@ function FirstView() {
           initial="hiddenY"
           whileInView="visibleY"
           variants={variants}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           className="text-background container-fluid ps-5 pt-5"
         >
@@ -47,19 +48,14 @@ function FirstView() {
                 </Link>
               </div>
 
-              <div
-                className=""
-                initial="hiddenX"
-                whileInView="visibleRectangulo"
-                variants={variants}
-                transition={{ duration: 0.3, delay: 1.3, ease: "easeInOut" }}
-              >
+              <div className="ecotext-container">
                 <motion.h2
                   className="text-white m-plus-rounded-1c-regular product-h2 not-mobile"
                   initial="hiddenX"
                   whileInView="visibleTop"
                   variants={variants}
-                  transition={{ duration: 0.3, delay: 0.6, ease: "easeInOut" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
                 >
                   <strong>
                     <i>
@@ -72,7 +68,8 @@ function FirstView() {
                   initial="hiddenX"
                   whileInView="visibleMiddle"
                   variants={variants}
-                  transition={{ duration: 0.3, delay: 1, ease: "easeInOut" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.2, ease: "easeInOut" }}
                 >
                   <strong>
                     <i>
@@ -85,7 +82,8 @@ function FirstView() {
                   initial="hiddenX"
                   whileInView="visibleBot"
                   variants={variants}
-                  transition={{ duration: 0.3, delay: 1.3, ease: "easeInOut" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 1.8, ease: "easeInOut" }}
                 >
                   <strong>
                     <i>
@@ -94,6 +92,48 @@ function FirstView() {
                   </strong>
                 </motion.h2>
               </div>
+            </div>
+            <div className="col-0 col-lg-6 p-lg-5 mt-5 p-5 not-mobile ">
+              <motion.h2 className="text-center text-light m-plus-rounded-1c-regular"
+                initial={{ y: "35dvh", left: "30%", opacity: 0 }}
+                whileInView={{ opacity: 1, right: "15%" }}
+                transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
+              >
+                Noticias recientes
+                <div className="row">
+                  <hr className="col-4" style={{ color: "transparent" }} />
+                  <hr className="col-4" />
+                  <hr className="col-4" style={{ color: "transparent" }} />
+                </div>
+              </motion.h2>
+
+              <motion.div className="card mt-2 bg-blur"
+                initial={{ y: "35dvh", width: "70%", left: "30%", opacity: 0 }}
+                whileInView={{ left: "15%", opacity: 1 }}
+                transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}>
+                <Link smooth to="/Noticias">
+                  <div className="card-body text-white">
+                    <h5 className="card-title">ASFALTO EN FRÍO: UNA FORMA DE COMBATIR EL CALENTAMIENTO GLOBAL
+                    </h5>
+                    <p className="card-text">Un reciente estudio del MIT destaca el impacto positivo del asfalto frío en la reducción de emisiones de gases de efecto invernadero y la disminución de la temperatura en ciudades como Boston y Phoenix...</p>
+                    <p className="card-text"><small className="text-light">26 de Diciembre de 2023</small></p>
+                  </div>
+                </Link>
+              </motion.div>
+              <motion.div className="card mt-2 bg-blur"
+                initial={{ y: "35dvh", width: "70%", left: "30%", opacity: 0 }}
+                whileInView={{ left: "15%", opacity: 1 }}
+                transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}>
+                <Link smooth to="/Noticias">
+                  <div className="card-body text-white">
+                    <h5 className="card-title">ASFALTO EN FRÍO: UNA FORMA DE COMBATIR EL CALENTAMIENTO GLOBAL
+                    </h5>
+                    <p className="card-text">Un reciente estudio del MIT destaca el impacto positivo del asfalto frío en la reducción de emisiones de gases de efecto invernadero y la disminución de la temperatura en ciudades como Boston y Phoenix...</p>
+                    <p className="card-text"><small className="text-light">26 de Diciembre de 2023</small></p>
+                  </div>
+                </Link>
+              </motion.div>
+
             </div>
           </div>
         </motion.section>

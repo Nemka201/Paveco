@@ -1,13 +1,23 @@
 import UsosComponent from "../components/UsosComponent";
+import { motion } from "framer-motion";
+
 function Usos() {
+  const variants = {
+    hidden: { opacity: 0, y: 150 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <>
-      <div className="container-fluid p-5 pt-0 bg-black" id="usos">
-        <div className="row p-4 pt-0">
+      <div className="container-fluid p-5 pt-4 bg-black" id="usos" style={{ maxHeight: "100vh" }}>
+        <div className="row p-4 pt-0" >
           <div className="col-12">
-            <h1 className="titulo text-center pb-4 pt-4 m-plus-rounded-1c-regular text-white-s mt-5">
+            <motion.h1 className="titulo text-center m-plus-rounded-1c-regular text-white-s mt-5"
+              initial="hidden"
+              whileInView="visible"
+              variants={variants}
+              transition={{ duration: 0.4, delay: 0.2, ease: "linear" }}>
               USOS
-            </h1>
+            </motion.h1>
             <div className="row text-usos roboto-medium usos-container">
               <UsosComponent
                 classContainer="usos-left item1"

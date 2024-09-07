@@ -29,7 +29,7 @@ function Presentacion() {
                   PAV<span className="green-text">ECO</span> ARGENTINA es una empresa especializada en la
                   formulación de asfalto en frío e infraestructura vial de
                   de última generación. Nuestra compañía cuenta con el respaldo, aval y supervisión de
-                  nuestra casa matriz en Estados Unidos, La cual provee <span className="green-text">ECO</span>PAV,
+                  nuestra casa matriz en Estados Unidos, GLOBAL SOIL GROUP, la cual provee  <span className="green-text">ECO</span>PAV,
                    uno de los productos más seguros y efectivos
                   disponibles en el mercado americano para la fabricación de
                   asfalto en frio.
@@ -49,7 +49,7 @@ function Presentacion() {
                 transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
               >
                 <h2 className="text-start pb-3 pt-md-4 pt-0 m-plus-rounded-1c-regular ">
-                  <span className="green-text">ECO</span>PAV
+                PAV<span className="green-text">ECO</span>
                 </h2>
                 <motion.p
                   className="pb-5 roboto-regular text-start mt-3"
